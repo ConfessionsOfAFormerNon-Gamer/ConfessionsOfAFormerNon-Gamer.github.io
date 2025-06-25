@@ -1,0 +1,188 @@
+/*
+Portfolio Website Styles
+Author: Becky Roesch
+Course: IS_LT 7355 Web Design & Development
+University of Missouri, Summer 2025
+Created: June 18, 2025
+Last Updated: June 24, 2025
+Tested: June 24, 2025 - Passed validation
+    Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
+    Passed on iPad tablet browsers in xx, xx, and xx
+    Passed on iPhone mobile browsers in xx, xx, and xx
+tarted and it was a 'Ooh, what if I do THIS?? Or what about THIS??
+
+
+*/ 
+
+
+/* ----- CSS RESET ----- */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ----- CSS COLOR PALETTE ----- */
+
+:root {
+
+/* Basic Colors */
+
+    --charcoal-black: #1a202c;
+    --dark-slate: #2c3e50;
+    --sapphire-blue: #0369a1;
+    --vibrant-orange: #FF6b35;
+    --cool-gray: #4a5568;
+    --medium-gray: #666;
+    --off-white: #fdfdfd;
+    --pure-white: #ffffff;
+
+ 
+    /* Variable Color Names */
+
+    --primary-color: var(--sapphire-blue); 
+    --accent-color: var(--vibrant-orange); 
+    --text-color: var(--cool-gray); 
+    --heading-color: var(--charcoal-black);
+    --page-titles: var(--dark-slate);
+    --section-headings: var(--dark-slate);
+    --hero-subtitle: var(--sapphire-blue);
+    --welcome-text: var(--dark-slate);
+    --body-text: var(--cool-gray);
+    --nav-links: var(--sapphire-blue);
+    --body-links: var(--sapphire-blue);
+    --buttons: var(--pure-white);
+
+}
+
+/* ----- MAIN LAYOUT & FONTS ----- */
+
+body {
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: var(--body-text);
+    text-align: left;
+}
+
+h1, .hero-section {
+
+    text-align: center;
+}
+
+/* ----- FONTS ORDER/HIERARCHY----- */
+
+/* Hero Name - BIG heading for name on index.html */
+.hero-name {
+
+    color: var(--heading-color);
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+/* Hero Subtitle - on index.html */
+.hero-subtitle {
+
+    color: var(--hero-subtitle);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+/* Page Titles - H1 revamp */
+h1  {
+
+    color: var(--page-titles);
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+
+}
+
+/* Section Headings - H2 revamp */
+h2  {
+
+    color: var(--page-titles);
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.2;
+
+}
+
+/* Subsection Headings - H3 revamp */
+h3  {
+
+    color: var(--section-headings);
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+/* Welcome Text - fancy */
+.welcome-text {
+
+    color: var(--welcome-text);
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Body Text - duh */
+.body-text   {
+
+    color: var(--body-text);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Navigation - duh */
+.nav-links   {
+
+    color: var(--nav-links);
+    font-weight: 500;
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+/* Body links - duh */
+.body-links   {
+
+    color: var(--body-links);
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ----- Components: or "Extra Stuff" ----- */
+
+/* Buttons */
+
+.resume-link {
+    display: block;
+    background-color: var(--sapphire-blue);
+    color: var(--buttons);
+    border: 2px solid var(--buttons);
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px auto;
+    width: 250px;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+
+
+
+
+
