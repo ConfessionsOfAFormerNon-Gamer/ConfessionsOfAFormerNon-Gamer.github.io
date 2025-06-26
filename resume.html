@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Becky Roesch - Learning Technologies Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.75in;
+            font-size: 11pt;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 1rem;
+        }
+        
+        .name {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 28pt;
+            color: #1a202c;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+        }
+        
+        .title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 14pt;
+            color: #2980b9;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+        
+        .contact {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 11pt;
+            color: #4a5568;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 1.25rem;
+        }
+        
+        .section-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 12pt;
+            color: #2980b9;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.25rem;
+        }
+        
+        /* Professional Summary */
+        .summary {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 11pt;
+            color: #4a5568;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 1rem;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.25rem;
+        }
+        
+        .job-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 11pt;
+            color: #2c3e50;
+        }
+        
+        .job-company {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 10pt;
+            color: #2980b9;
+            margin-top: 0.1rem;
+        }
+        
+        .job-location {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 9pt;
+            color: #718096;
+            text-align: right;
+        }
+        
+        .job-achievements {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+        
+        .job-achievements li {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10pt;
+            color: #4a5568;
+            line-height: 1.4;
+            margin-bottom: 0.25rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        
+        .job-achievements li::before {
+            content: "•";
+            color: #2980b9;
+            font-weight: 600;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Metrics highlighting */
+        .metric {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 0.75rem;
+        }
+        
+        .degree {
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 11pt;
+            color: #2c3e50;
+        }
+        
+        .school {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 10pt;
+            color: #2980b9;
+        }
+        
+        .grad-date {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 9pt;
+            color: #718096;
+            float: right;
+        }
+        
+        .specialization {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10pt;
+            color: #4a5568;
+            font-style: italic;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+        
+        .skill-category {
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 10pt;
+            color: #2c3e50;
+            padding-left: 8pt;
+            border-left: 3pt solid #2980b9;
+        }
+        
+        .skill-list {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 10pt;
+            color: #4a5568;
+            margin-top: 0.1rem;
+        }
+        
+        /* Print optimization */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0.5in;
+                font-size: 10pt;
+            }
+            
+            .name {
+                font-size: 24pt;
+            }
+            
+            .title {
+                font-size: 12pt;
+            }
+        }
+        
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="name">Becky Roesch</h1>
+        <p class="title">Marketing Operations Specialist</p>
+        <p class="contact">314.825.2847 • rmr677@umsystem.edu • St. Louis, Missouri</p>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            Marketing Operations professional with proven expertise in email marketing execution and learning technologies. Currently completing M.S. in Information Science & Learning Technologies (4.0 GPA) at University of Missouri. Demonstrated success in campaign development and execution while developing innovative educational experiences through instructional design methodologies. Strong background in adult learning theory, customer education, and technology training with a passion for creating accessible, engaging learning experiences that support marketing objectives and drive measurable results.
+        </p>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Marketing Operations Specialist</div>
+                    <div class="job-company">Metabolic Meals LLC</div>
+                </div>
+                <div class="job-location">St. Louis, Missouri<br>2023 - Present</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Developed and executed comprehensive email marketing campaigns, contributing to team achievements of <span class="metric">120% increase in open rates</span> and <span class="metric">165% increase in click rates</span></li>
+                <li>Independently designed and implemented two-portfolio welcome flow with 14 drip emails each for new customer onboarding</li>
+                <li>Created comprehensive 90-day automated email portfolio, spanning five flows (drop cart, winover, sunset, suppression, and revival) targeting prospects who had never placed an order</li>
+                <li>Achieved <span class="metric">37% increase in community engagement</span> through strategic content development and relationship building across multiple platforms</li>
+                <li>Improved email bounce rates by <span class="metric">36%</span> through proactive list hygiene and data quality management initiatives</li>
+                <li>Executed SMS and email campaigns using Klaviyo CRM platform while monitoring performance metrics and providing data insights</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Marketing Coordinator</div>
+                    <div class="job-company">Metabolic Meals LLC</div>
+                </div>
+                <div class="job-location">St. Louis, Missouri (Remote)<br>2020 - 2023</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Coordinated cross-functional initiatives across marketing, technology, and production teams to optimize campaign performance</li>
+                <li>Successfully managed remote work responsibilities with autonomy, maintaining productivity and collaboration across distributed teams</li>
+                <li>Supported development of audience segmentation strategies and email marketing automation workflows</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Training Lead</div>
+                    <div class="job-company">Apple Store West County</div>
+                </div>
+                <div class="job-location">St. Louis, Missouri<br>2020 - 2022</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Designed and deployed training programs for product and partner launches using WebEx and in-person delivery methods</li>
+                <li>Maintained <span class="metric">94% customer satisfaction rate</span> across all training and educational initiatives</li>
+                <li>Organized key training courses for new employees and career development initiatives</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Field Trip Champion</div>
+                    <div class="job-company">Apple Store West County</div>
+                </div>
+                <div class="job-location">St. Louis, Missouri<br>2018 - 2020</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Developed custom educational content for community and educational groups, meeting specific organizational goals and requirements</li>
+                <li>Grew program attendance by <span class="metric">150% in 18 months</span> through innovative scheduling and strategic recruitment</li>
+                <li>Coordinated staffing, logistics, and documentation for educational group experiences</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Creative & Technical Specialist</div>
+                    <div class="job-company">Apple Store West County</div>
+                </div>
+                <div class="job-location">St. Louis, Missouri<br>2015 - 2020</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Facilitated adult learning sessions with focus on hands-on, experiential learning methodologies</li>
+                <li>Conducted real-time needs analysis to customize training approaches within individual and group sessions</li>
+                <li>Troubleshot iOS devices and provided technical support while maintaining customer education focus</li>
+                <li>Exceeded sales and customer service goals through consultative approach and educational expertise</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <div class="job-title">Elementary Teacher, Grades 4-5</div>
+                    <div class="job-company">Brentwood & Farmington School Districts</div>
+                </div>
+                <div class="job-location">Missouri<br>2008 - 2015</div>
+            </div>
+            <ul class="job-achievements">
+                <li>Successfully piloted wireless technology curriculum with 70 students, leading to district-wide implementation</li>
+                <li>Built and maintained classroom website for student, family, and community engagement</li>
+                <li>Implemented electronic grade book system for improved record keeping and student management</li>
+                <li>Collaborated with administration and families to integrate technology solutions for diverse learning needs</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item clearfix">
+            <div class="grad-date">Fall 2025</div>
+            <div class="degree">Master of Science, Information Science & Learning Technologies</div>
+            <div class="school">University of Missouri Columbia</div>
+            <div class="specialization">Specialization: Learning Technologies & Design</div>
+        </div>
+
+        <div class="education-item clearfix">
+            <div class="grad-date">Completed</div>
+            <div class="degree">Chancellor's Certificate, Electronic Arts & Publishing</div>
+            <div class="school">University of Missouri St. Louis</div>
+            <div class="specialization">Adobe Creative Suite, graphic design, desktop publishing</div>
+        </div>
+
+        <div class="education-item clearfix">
+            <div class="grad-date">Completed</div>
+            <div class="degree">Bachelor of Science, Elementary Education</div>
+            <div class="school">Northwest Missouri State University</div>
+            <div class="specialization">Minor in English</div>
+        </div>
+    </section>
+
+    <!-- Technical Competencies -->
+    <section class="section">
+        <h2 class="section-title">Technical Competencies</h2>
+        <div class="skills-grid">
+            <div>
+                <div class="skill-category">Learning Design:</div>
+                <div class="skill-list">Instructional Design, Game-Based Learning, Universal Design, Canvas LMS, Adult Learning Theory</div>
+            </div>
+            <div>
+                <div class="skill-category">Digital Marketing:</div>
+                <div class="skill-list">Klaviyo CRM, Email Marketing, SMS Campaigns, Marketing Automation, Analytics & KPI Monitoring</div>
+            </div>
+            <div>
+                <div class="skill-category">Project Management:</div>
+                <div class="skill-list">Academic Project Management Theory, Risk Assessment, Resource Planning, SmartSheet, Gantt Charts</div>
+            </div>
+            <div>
+                <div class="skill-category">Technical Proficiency:</div>
+                <div class="skill-list">MS Office, Apple Hardware/Software, Web Development, Video Conferencing, Adobe Creative Suite</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Achievements -->
+    <section class="section">
+        <h2 class="section-title">Key Achievements</h2>
+        <ul class="job-achievements">
+            <li>Independently created and executed comprehensive email marketing flows, contributing to significant team performance improvements</li>
+            <li>Successfully completed 10 graduate courses in Learning Technologies with <span class="metric">4.0 GPA</span>, focusing on instructional design and educational technology</li>
+            <li>Maintained <span class="metric">94% customer satisfaction rate</span> across training and educational initiatives</li>
+            <li>Pioneered wireless technology integration in K-12 environment, leading to district-wide curriculum adoption</li>
+        </ul>
+    </section>
+</body>
+</html>
