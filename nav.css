@@ -1,0 +1,108 @@
+/*
+
+Portfolio Website Navigation Styles
+Author: Becky Roesch
+Course: IS_LT 7355 Web Design & Development
+University of Missouri, Summer 2025
+Created: June 25, 2025
+Last Updated: June 26, 2025
+Tested: June 26, 2025 - Passed validation
+    Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
+    Passed on iPad tablet browsers in xx, xx, and xx
+    Passed on iPhone mobile browsers in xx, xx, and xx
+
+*/ 
+
+/* Navigation Container */
+
+nav {
+    background-color: var(--pure-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(102, 102, 102, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+ /* Figuring out how to get this to be FULLLL width was stupid hard. */ 
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+
+}
+
+
+/* Navigation [Inside Container] */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+
+/* Logo + Brand Name-- me!! */
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+.nav-logo {
+    float: left;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--dark-slate);
+    text-decoration: none;
+    line-height: 44px;
+}
+
+
+/* Navigation Links- right */
+
+.nav-links {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+/* Indv Links - Inline Block */
+
+.nav-links li {
+    display: inline-block; /* makes linkes side-by-side */
+    margin-left: 2rem; /* space BETWEEN links */
+
+}
+
+
+.nav-links a {
+    display: inline-block;
+    padding: .75rem 1rem;
+    min-height: 44px; /* for touch spacing, for accessibility */
+    text-decoration: none;
+    border-radius: 6px;
+    color: var(--sapphire-blue);
+    font-weight: 500;
+    font-size: .95rem;
+
+    /* keeps hover happy */
+}
+
+
+/* Clears floats */
+
+.nav-container::after {
+    content: " ";
+    display: table;
+    clear: both;
+}

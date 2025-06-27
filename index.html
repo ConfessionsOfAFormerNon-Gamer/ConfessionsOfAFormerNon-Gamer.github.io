@@ -5,9 +5,9 @@ Use: Introduction to the portfolio site iteself
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: June 18, 2025
+Updated: June 25, 2025
 Developed: June 14, 2025
-Tested: June 18, 2025:
+Tested: June 25, 2025:
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx
@@ -22,6 +22,7 @@ Tested: June 18, 2025:
         <!-- LINK TO CSS FILE -->
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="nav.css">
 
 </head>
 
@@ -30,43 +31,58 @@ Tested: June 18, 2025:
     <header>
 
         <section>
-            This content is commented out and won't display.
-                <h1>Header: My Name Should Be Here</h1>
-            I would really rather not have a header above my nav section here. Is that an option? I've included it for the sake of this assignment. I wouldn't mind "Becky Roesch," smaller at the top left, and then my nav links at the right.
+            
         </section>
+
     </header>
         -->
 
 
     <nav>
-        <!-- navigation links will go here -->
+         <div class="nav-container">
 
+            <!-- Logo floated left -->
+
+             <a href="index.html" class="nav-logo">
+                <img src= "content/BR_dk_slate_logo.png" alt="BR Logo" class="logo-icon">
+                Becky Roesch
+             </a>
+
+
+            <!-- Links on Right (Float) --> 
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#projects.html">Projects</a></li>
+                <li><a href="#reflection.html">Reflection</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <!--    HERO SECTION START + CSS DETAILS FOR LATER
-        Use this info for styling later:
-        H1      Name     Inter 700 (bold), 3.5rem, dark charcoal (#1a202c)
-        H2      Subtitle   Inter 500 (medium), 1.4rem, sapphire blue (#0369a1)
-        H3      Welcome    Inter 600 (semi-bold), 1.2rem, dark gray (#2c3e50)
-        H4      Body       Inter 400 (regular), 1.1rem, medium gray (#4a5568) 
-       -->
+        <!--    HERO SECTION START    -->
 
-        <h1 class="hero-name">Becky Roesch</h1>
+        <section class="hero-section">
+
+            <h1 class="hero-name">Becky Roesch</h1>
         
-        <p class="hero-subtitle">Learning Technologies Student</p>
+            <p class="hero-subtitle">Learning Technologies Student</p>
 
-        <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
+            <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
 
-        <p>This website showcases my journey through the Learning Technologies and Design program at the University of Missouri. There I've developed expertise in researching learner needs, designing engaging online instruction, and using cutting-edge technologies like VR and game-based learning to create memorable training experiences. As someone who believes in meeting learners where they are and inspiring them to go farther, I've built this portfolio to demonstrate how my education has enhanced both my professional capabilities and personal approach to solving complex problems.</p>
+            <p>This website showcases my journey through the Learning Technologies and Design program at the University of Missouri. There I've developed expertise in researching learner needs, designing engaging online instruction, and using cutting-edge technologies like VR and game-based learning to create memorable training experiences. As someone who believes in meeting learners where they are and inspiring them to go farther, I've built this portfolio to demonstrate how my education has enhanced both my professional capabilities and personal approach to solving complex problems.</p>
 
-        <p>Here you'll see how my background as a teacher-turned-marketer influences my project choices. You can explore artifacts that highlight my core competencies in instructional design and technology integration, and learn more about my philosophy of designing clear, practical solutions to solve problems and facilitate authentic learning. Whether you're a potential employer looking for someone to onboard and educate technology clients, or a fellow educator interested in learning design, this site offers insight into how I transform educational challenges into engaging, results-driven experiences that help people and organizations thrive.</p>
+            <p>Here you'll see how my background as a teacher-turned-marketer influences my project choices. You can explore artifacts that highlight my core competencies in instructional design and technology integration, and learn more about my philosophy of designing clear, practical solutions to solve problems and facilitate authentic learning. Whether you're a potential employer looking for someone to onboard and educate technology clients, or a fellow educator interested in learning design, this site offers insight into how I transform educational challenges into engaging, results-driven experiences that help people and organizations thrive.</p>
         
+        </section>
+
         <!-- HERO SECTION END -->
+         
     </main>
 
     <footer>
-        <!-- slight variance among footer content for different display sizes -->
 
         © 2025 Becky Roesch | <a href="mailto:rmr677@umsystem.edu">Let's connect!</a><br>
         Built with HTML, CSS, and passion for learning technologies.

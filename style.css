@@ -173,7 +173,26 @@ footer {
     line-height: 1.5;
     padding: 20px;
     text-align: left;
-    margin: 40px -20px -20px -20px;
+    margin-top: 3rem;
+
+ /* Still EXTRA, but less hard than when I needed to figure it out for the nav box! */
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+
+}
+
+/* Footer [Inside Container] */
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
 }
 
 .footer-links   {
