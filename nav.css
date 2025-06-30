@@ -11,18 +11,34 @@ Tested: June 26, 2025 - Passed validation
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx
 
-*/ 
+Last worked on 25 0628 11:56p
 
-/* Navigation Container */
+/* ----- CSS COLOR PALETTE ----- */
 
-nav {
+:root {
+/* Basic Colors */
+
+    --charcoal-black: #1a202c;
+    --dark-slate: #2c3e50;
+    --sapphire-blue: #0369a1;
+    --vibrant-orange: #FF6b35;
+    --cool-gray: #4a5568;
+    --medium-gray: #666;
+    --off-white: #fdfdfd;
+    --pure-white: #ffffff;
+}
+
+/* Nav Container */
+
+.navbar {
     background-color: var(--pure-white);
     padding: 1rem 0;
     box-shadow: 0 2px 4px rgba(102, 102, 102, 0.12);
     position: sticky;
     top: 0;
     z-index: 100;
-    
+
+
  /* Figuring out how to get this to be FULLLL width was stupid hard. */ 
 
     position: relative;
@@ -35,53 +51,135 @@ nav {
 }
 
 
-/* Navigation [Inside Container] */
+/* Navigation [Inside Container- FLEXBOX!] */
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Logo + Brand Name-- me!! */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 
 }
 
 
-/* Logo + Brand Name-- me!! */
+.logo-text {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
 
 .logo-icon {
     width: 32px;
     height: 32px;
     margin-right: 8px;
     vertical-align: middle;
+
+} 
+
+
+/* Mobile Nav - Summary + Details */
+
+.nav-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--sapphire-blue);
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-dropdown summary:hover,
+.nav-dropdown summary:focus {
+    color: var(--vibrant-orange);
+
 }
 
 
-.nav-logo {
-    float: left;
-    font-weight: 600;
-    font-size: 1.2rem;
-    color: var(--dark-slate);
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: var(--pure-white);
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    z-index: 50;
+}
+
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--sapphire-blue);
     text-decoration: none;
-    line-height: 44px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s ease;
+
 }
 
 
-/* Navigation Links- right */
+/* Mobile drop down on hover - orange left border */
+
+.dropdown-menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--vibrant-orange);
+    transition: width 0.3s ease;
+
+}
+
+    .dropdown-menu a:hover::before,
+    .dropdown-menu a:focus::before {
+        width: 4px;
+    }
+
+    .dropdown-menu a:focus {
+        outline: 2px solid var(--vibrant-orange);
+        outline-offset: 2px;
+    }
+
+
+/* Current page styling for mobile */
+
+.dropdown-menu a.current {
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white);
+}
+
+
+/* Desktop Nav - Hidden by default, becaue we're fan-say! */
 
 .nav-links {
-    float: right;
+    display: none;
     list-style: none;
     margin: 0;
     padding: 0;
-
-}
-
-
-/* Indv Links - Inline Block */
-
-.nav-links li {
-    display: inline-block; /* makes linkes side-by-side */
-    margin-left: 2rem; /* space BETWEEN links */
-
 }
 
 
@@ -94,66 +192,182 @@ nav {
     color: var(--sapphire-blue);
     font-weight: 500;
     font-size: .95rem;
-
-    /* keeps hover happy */
-}
-
-
-/* Clears floats */
-
-.nav-container::after {
-    content: " ";
-    display: table;
-    clear: both;
-
-}
-
-/* Dropdown Container/Menu */
-
-.dropdown {
     position: relative;
-    display: inline-block;  
+    transition: all 0.3s ease;
 
+    /* keeps hover happy + fancy underline */
 }
 
-.dropdown-menu {
-    display: none;
+
+/* Desktop nav hover - orange underline slide */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--vibrant-orange);
+    transition: width 0.3s ease;
+}
+
+
+.nav-links a:hover::after,
+.nav-links a:focus::after {
+    width: 100%;
+}
+
+
+.nav-links a:focus {
+    outline: 2px solid var(--vibrant-orange);
+    outline-offset: 2px;
+}
+
+
+/* Current page styling for desktop */
+
+.nav-links a.current {
+        color: var(--vibrant-orange);
+}
+
+
+nav.links a.current::after {
+    width: 100%;
+}
+
+
+ /* ----- TWO-TIER DROPDOWN - PROJECTS SUMMARY ----- */
+
+/* Desktop- Projects Dropdown Container */
+
+.nav-links .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links .dropdown:hover .dropdown-submenu {
+    display: block;
+}
+
+.nav-links .dropdown::after {
+    content: '';
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100%;
+    height: 18px; /* Bridge the gap */
+    background: transparent;
+}
+
+.nav-links .dropdown-submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 18px);
+    left: 0;
     background-color: var(--pure-white);
-    min-width: 200px;
+    width: max-content; /* auto-adjusts to a less obnoxious width, not 'too big' like before! :) */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 6px;
+    border-radius: 0 0 6px 6px;
     list-style: none;
     margin: 0;
-    padding: .5rem 0;
-    z-index: 1000;
+    padding: 0.5rem 0;
+    z-index: 50
+
 }
 
-/* Show Dropdown on Hover */
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Menu Choices */
-
-.dropdown-menu li {
+.nav-links .dropdown-submenu li {
     margin: 0;
     display: block;
 }
 
-.dropdown-menu a {
+
+.nav-links .dropdown-submenu a {
     display: block;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
     color: var(--sapphire-blue);
     text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 0;
     border-radius: 0;
-    font-size: .9rem;
-    margin-left: 0; /* ignores margin + scoots over from main nav */
+    position: relative;
 }
 
-.dropdown-menu a:hover {
+.nav-links .dropdown-submenu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--vibrant-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-links .dropdown-submenu a:hover::before,
+.nav-links .dropdown-submenu a:focus::before {
+    width: 4px;
+}
+
+.nav-links .dropdown-submenu a::after {
+    display: none; /* removes orange treatment from submenu */
+}
+
+.nav-links .dropdown-submenu a:hover {
     background-color: var(--off-white);
+}
+
+/* Mobile Projects Dropdown Container */
+.dropdown-menu .mobile-projects-submenu {
+    background-color: var(--off-white);
+    margin-left: 0;
+    padding: 0;
+    border-radius: 4px;
+    list-style: none;
+    width: 100%;
+}
+
+.dropdown-menu .mobile-projects-submenu li {
+        margin: 0;
+        padding-left: 1rem;
+}
+
+.dropdown-menu .mobile-projects-submenu a {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+}
+
+
+/* RESPONSIVE BREAKPOINTS - SMALL, MED + LARGE SCREENS*/
+
+/* Tablet and Desktop - 768px and up */
+@media screen and (min-width: 768px) {
+    /* Hide mobile navigation */
+    .nav-dropdown {
+        display: none;
+    }
+    
+    /* Show desktop navigation */
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+}
+
+
+/* BIG Desktop - Premium spacing */
+@media screen and (min-width: 1024px) {
+    .nav-links li {
+        margin-left: 2.5rem;
+    }
+    
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
 }

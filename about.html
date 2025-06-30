@@ -5,9 +5,9 @@ Use: Introduction to the portfolio's coder and author, Becky Roesch
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: June 26, 2025
+Updated: June 29, 2025
 Developed: June 3, 2025
-Tested: June 26, 2025:
+Tested: June 29, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx
@@ -27,44 +27,54 @@ Tested: June 26, 2025:
 </head>
 
 <body>
-    
-        <header>
-
-        </header>
-
-        <nav>
-         <div class="nav-container">
-
-            <!-- Logo floated left -->
-
-             <a href="index.html" class="nav-logo">
-                <img src= "content/BR_dk_slate_logo.png" alt="BR Logo" class="logo-icon">
-                Becky Roesch
-             </a>
+    <main>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="content/BR_dk_slate_logo.png" alt="BR Logo" class="logo-icon">
+                    <span class="logo-text">Becky Roesch</span>                   
+                </a>
 
 
-            <!-- Links on Right (Float) --> 
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-
-            <!-- Drop Down for Projects Page --> 
-                <li class="dropdown">
-                    <a href="#projects.html" class="dropdown-toggle">Projects</a>
+            <!-- Mobile Navigation (Details/Summary action!) -->
+                <details class="nav-dropdown">
+                    <summary>≣</summary>
                     <ul class="dropdown-menu">
-                        <li><a href="#project1.html">Link 1</a></li>
-                        <li><a href="#project2.html">Link 2</a></li>
-                        <li><a href="#project3.html">Link 3</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="current">About</a></li>
+                        <li>
+                            <a href="#projects.html">Projects</a>
+                            <ul class="mobile-projects-submenu">
+                                <li><a href="#link1">Link 1</a></li>
+                                <li><a href="#link2">Link 2</a></li>
+                                <li><a href="#link3">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="reflection.html">Reflection</a></li>
+                        <li><a href="#contact.html">Contact</a></li>
                     </ul>
-                </li>
+                </details>
 
-                <li><a href="#reflection.html">Reflection</a></li>
-                <li><a href="#contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+            <!-- Desktop Navigation -->     
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="current">About</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">Projects</a>
+                        <ul class="dropdown-submenu">
+                            <li><a href="#link1">Link 1</a></li>
+                            <li><a href="#link2">Link 2</a></li>
+                            <li><a href="#link3">Link 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="#contact.html">Contact</a></li>
+                </ul>       
+            </div>
+        </nav>
 
+    <header>
         <main>
 
             <h1>An Indroduction</h1>

@@ -4,13 +4,14 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: June 24, 2025
-Tested: June 24, 2025 - Passed validation
+Last Updated: June 29, 2025
+Tested: June 29, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx
-tarted and it was a 'Ooh, what if I do THIS?? Or what about THIS??
 
+v3: updated footer for better styling on mobile, using media query! :))
+v4: adjusted hero text sizing across breakpoints
 
 */ 
 
@@ -100,7 +101,7 @@ h1, .hero-subtitle, .welcome-text {
 h1  {
     color: var(--page-titles);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 1.2;
 
 }
@@ -110,7 +111,7 @@ h1  {
 h2  {
     color: var(--page-titles);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 1.2;
 
 }
@@ -269,8 +270,148 @@ ul {
 }
 
 
+@media screen and (max-width: 767px) {
+    footer {
+        font-size: .9rem;
+        text-align: center; /* better UX for mobile, even if I don't like how it looks as well */
+        padding: 1.5rem 1rem; /* better padding for mobile */
+
+    } 
+    
+    .footer-links {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem
+    }
+}
+
+/* ----- RESPONSIVE BREAKPOINTS ----- */
+
+/* Tablet + Desktop - 768+ */
+@media screen and (min-width: 768px) {
+    /* hide mobile nav */
+    .nav-dropdown {
+        display: none
+    }
+
+    /* show desktop nav */
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* BIG Desktop, Premuim spacing - 1024+ */
+@media screen and (min-width: 1024px) {
+    .nav-links li {
+        margin-left: 2.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+        padding: 0.75rem 1.25rem;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 768px) {
+
+/* Hero Name - Medium size for tablet */
+    .hero-name {
+        font-size: 3rem;
+    }
+
+/* Hero Subtitle - Medium size for tablet */
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+/* CTA Button - Medium size for tablet */
+    .cta-button {
+        width: 200px;
+    }
 
 
+}
 
 
+/* Desktop Styles */
+@media screen and (min-width: 1024px) {
 
+/* Hero Section - Left Align for Deskopt */
+    .hero-name, .hero-subtitle {
+        text-align: left;
+    }
+
+/* Hero Name - Large size for Desktop */
+    .hero-name {
+        font-size: 3.5rem;
+    }
+
+/* Hero Subtitle - Large size for Desktop */  
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+
+/* CTA Button - Larger size for Desktop */  
+    .cta-button {
+        width: 250px;
+    }
+
+}
+
+
+/* ----- REFLECTION PAGE STYLES ----- */
+
+/* Box Model - Container for ALL reflection.html content */
+    .reflection-content {
+        background-color: var(--pure-white);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    }
+
+
+/* Drop Cap: first letter, first paragraph */
+    .reflection-content .first-paragraph::first-letter {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--sapphire-blue);
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.6rem;
+    margin-top: 0.2rem;
+    }
+
+
+/* Text Indent - ALLLLLL paragraphs except first */
+    .reflection-content p:not(.first-paragraph){
+        text-indent: 1.5rem;
+    }
+
+
+/* Readable spacing for all paragraphs, per specs */
+    .reflection-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7rem;
+    }
+
+
+/* H2 headings inside reflection content */
+    .reflection-content h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-slate);
+    }
+
+
+/* First H2 doesn't need a top margin, coming off the H1 spacing */
+    .reflection-content h2:first-of-type {
+        margin-top: 0;
+    }
