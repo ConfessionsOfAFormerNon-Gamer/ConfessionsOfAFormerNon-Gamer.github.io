@@ -5,7 +5,7 @@ Use: Introduction to the portfolio's coder and author, Becky Roesch
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: July 1, 2025
+Updated: July 2, 2025
 Developed: June 3, 2025
 Tested: June 29, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
@@ -30,54 +30,35 @@ Tested: June 29, 2025 - Passed validation
 
 <body>
     <main>
-        <!-- Navigation -->
-        <nav class="navbar">
-            <div class="nav-container">
-                <a href="index.html" class="nav-logo">
-                    <img src="content/BR_dk_slate_logo.png" alt="BR Logo" class="logo-icon">
-                    <span class="logo-text">Becky Roesch</span>                   
-                </a>
+           <!-- Navigation -->
+    <nav>
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+            <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+            <span class="logo-text">Becky Roesch</span>
+        </a>
 
-
-            <!-- Mobile Navigation (Details/Summary action!) -->
-                <details class="nav-dropdown">
-                    <summary>≣</summary>
-                    <ul class="dropdown-menu">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="current">About</a></li>
-                        <li>
-                            <a href="#projects.html">Projects</a>
-                            <ul class="mobile-projects-submenu">
-                                <li><a href="#link1">Link 1</a></li>
-                                <li><a href="#link2">Link 2</a></li>
-                                <li><a href="#link3">Link 3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="reflection.html">Reflection</a></li>
-                        <li><a href="#contact.html">Contact</a></li>
-                    </ul>
-                </details>
-
-            <!-- Desktop Navigation -->     
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="current">About</a></li>
-                    <li class="dropdown">
-                        <a href="#projects.html">Projects</a>
-                        <ul class="dropdown-submenu">
-                            <li><a href="#link1">Link 1</a></li>
-                            <li><a href="#link2">Link 2</a></li>
-                            <li><a href="#link3">Link 3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="reflection.html">Reflection</a></li>
-                    <li><a href="#contact.html">Contact</a></li>
-                </ul>       
-            </div>
-        </nav>
-
-    <header>
-        <main>
+        <!-- Single Navigation - Checkbox Trick :) -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
+        
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="current">About</a></li>
+            <li class="dropdown">
+                <a href="#projects.html">Projects</a>
+                <ul class="mobileHide">
+                    <li><a href="#project1">Link 1</a></li>
+                    <li><a href="#project2">Link 2</a></li>
+                    <li><a href="#project3">Link 3</a></li>
+                </ul>
+            </li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="#contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
             <h1>An Indroduction</h1>
 

@@ -291,40 +291,6 @@ ul {
 
 /* ----- RESPONSIVE BREAKPOINTS ----- */
 
-/* Tablet + Desktop - 768+ */
-@media screen and (min-width: 768px) {
-    /* hide mobile nav */
-    .nav-dropdown {
-        display: none
-    }
-
-    /* show desktop nav */
-    .nav-links {
-        display: flex;
-        align-items: center;
-    }
-}
-
-/* BIG Desktop, Premuim spacing - 1024+ */
-@media screen and (min-width: 1024px) {
-    .nav-links li {
-        margin-left: 2.5rem;
-    }
-
-    .nav-links a {
-        font-size: 1rem;
-        padding: 0.75rem 1.25rem;
-    }
-}
-
-/* Tablet Styles */
-@media screen and (min-width: 768px) {
-
-/* Hero Name - Medium size for tablet */
-    .hero-name {
-        font-size: 3rem;
-    }
-
 /* Hero Subtitle - Medium size for tablet */
     .hero-subtitle {
         font-size: 1.3rem;
@@ -334,10 +300,7 @@ ul {
     .cta-button {
         width: 200px;
     }
-
-
-}
-
+    
 
 /* Desktop Styles */
 @media screen and (min-width: 1024px) {
