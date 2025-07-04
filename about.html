@@ -5,9 +5,9 @@ Use: Introduction to the portfolio's coder and author, Becky Roesch
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: July 2, 2025
+Updated: July 3, 2025
 Developed: June 3, 2025
-Tested: July 2, 2025 - Passed validation
+Tested: July 3, 2025 - Passed validation
 Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
 Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
 Passed VI on iPhone mobile browsers in Safari; 
@@ -30,41 +30,45 @@ Passed VI on iPhone mobile browsers in Safari;
 </head>
 
 <body>
-    <main>
-           <!-- Navigation -->
     <nav>
-    <div class="nav-container">
-        <!-- Logo -->
-        <a href="index.html" class="nav-logo">
-            <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
-            <span class="logo-text">Becky Roesch</span>
-        </a>
+<!-- Navigation -->
 
-        <!-- Single Navigation - Checkbox Trick :) -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+                <span class="logo-text">Becky Roesch</span>
+            </a>
+
+<!-- Single Navigation - Checkbox Trick :) -->
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
         
-        <ul class="navMenu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="current">About</a></li>
-            <li class="dropdown">
-                <a href="#projects.html">Projects</a>
-                <ul class="mobileHide">
-                    <li><a href="#project1">Link 1</a></li>
-                    <li><a href="#project2">Link 2</a></li>
-                    <li><a href="#project3">Link 3</a></li>
-                </ul>
-            </li>
-            <li><a href="reflection.html">Reflection</a></li>
-            <li><a href="#contact.html">Contact</a></li>
-        </ul>
-    </div>
-</nav>
+            <ul class="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="current">About</a></li>
+                <li class="dropdown">
+                    <a href="#projects.html">Projects</a>
+                        <ul class="mobileHide">
+                            <li><a href="#project1">Link 1</a></li>
+                            <li><a href="#project2">Link 2</a></li>
+                            <li><a href="#project3">Link 3</a></li>
+                        </ul>
+                </li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <h1>An Indroduction</h1>
+    <main>
+        <header>
+            <h1>An Introduction</h1>
+        </header>
 
         <!-- professional headshot here -->
-            <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch's professional headshot">
+            <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch's professional headshot" class="headshot-about">
 
             <p>I'm Becky Roesch, a teacher at heart and marketer by trade. My career spans classroom teaching, Apple retail training and customer education. In my current role, I'm a marketer. I help shape our customers' views with my background in education and training. I <b>create clear solutions</b> for complex problems and <b>provide proactive support</b> with creativity. My actions build relationships, and those relationships drive results.<br>I'm finishing my Masters in Information Science and Learning Technology at the University of Missouri Columbia this fall. I completed a Chancellor's Certificate in Electronic Arts & Publishing at the University of Missouri St. Louis. I earned my BS.Ed in Elementary Education (with an English minor) from Northwest Missouri State University.</p>
             <p>My favorite quote comes from cultural anthropologist Margaret Mead:</p>

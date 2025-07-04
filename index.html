@@ -5,9 +5,9 @@ Use: Introduction to the portfolio site iteself
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: July 2, 2025
+Updated: July 3, 2025
 Developed: June 14, 2025
-Tested: July 2, 2025 - Passed validation
+Tested: July 3, 2025 - Passed validation
 Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
 Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
 Passed VI on iPhone mobile browsers in Safari; 
@@ -29,9 +29,9 @@ Passed VI on iPhone mobile browsers in Safari;
 </head>
 
 <body>
-    <main>
-        <!-- Navigation -->
     <nav>
+<!-- Navigation -->
+    
     <div class="nav-container">
         <!-- Logo -->
         <a href="index.html" class="nav-logo">
@@ -39,7 +39,8 @@ Passed VI on iPhone mobile browsers in Safari;
             <span class="logo-text">Becky Roesch</span>
         </a>
 
-        <!-- Single Navigation - Checkbox Trick :) -->
+    <!-- Single Navigation - Checkbox Trick :) -->
+
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
         
@@ -48,17 +49,19 @@ Passed VI on iPhone mobile browsers in Safari;
             <li><a href="about.html">About</a></li>
             <li class="dropdown">
                 <a href="#projects.html">Projects</a>
-                <ul class="mobileHide">
-                    <li><a href="#project1">Link 1</a></li>
-                    <li><a href="#project2">Link 2</a></li>
-                    <li><a href="#project3">Link 3</a></li>
-                </ul>
+                    <ul class="mobileHide">
+                        <li><a href="#project1">Link 1</a></li>
+                        <li><a href="#project2">Link 2</a></li>
+                        <li><a href="#project3">Link 3</a></li>
+                    </ul>
             </li>
             <li><a href="reflection.html">Reflection</a></li>
             <li><a href="#contact.html">Contact</a></li>
         </ul>
     </div>
 </nav>
+
+<main>
 
         <!--    HERO SECTION START    -->
 
@@ -67,6 +70,11 @@ Passed VI on iPhone mobile browsers in Safari;
             <h1 class="hero-name">Becky Roesch</h1>
         
             <p class="hero-subtitle">Learning Technologies Student</p>
+
+            <!-- TODO: Add professional headshot here
+                    - Use: src="content/01_roesch_headshot_web-ready_300.jpg" 
+                    - Class: "headshot-hero"
+                    - Alt: "Becky Roesch professional headshot" -->
 
             <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
 

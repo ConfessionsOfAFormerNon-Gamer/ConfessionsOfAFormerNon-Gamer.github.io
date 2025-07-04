@@ -162,8 +162,28 @@ h3  {
     line-height: 1.7;
 }
 
+/* ----- IMAGE STYLES ----- */
 
-/* ----- Footer Elements  ----- */
+/* About page headshot - small and centered */
+.headshot-about {
+    display: block;
+    margin: 0 auto;
+    max-width: 33%;
+    height: auto;
+}
+
+/* Home page headshot - larger, responsive layout */
+.headshot-hero {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* TODO: add responsive behavior for side-by-side layout 
+    had no idea TODO was a thing for other folks - love this! */
+
+}
+
+
+/* ----- FOOTER ELEMENTS ----- */
 
 footer {
     background: var(--footer-bg);
