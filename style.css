@@ -4,11 +4,11 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: June 29, 2025
-Tested: June 29, 2025 - Passed validation
+Last Updated: July 4, 2025
+Tested: July 4, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
-    Passed on iPad tablet browsers in xx, xx, and xx
-    Passed on iPhone mobile browsers in xx, xx, and xx
+    Passed on iPad tablet browsers in Safari, Firefox, and Chrome.
+    Passed on iPhone mobile browsers in Safari, Firefox, and Chrome.
 
 v3: updated footer for better styling on mobile, using media query! :))
 v4: adjusted hero text sizing across breakpoints
@@ -69,6 +69,12 @@ body {
     font-family: 'Inter', sans-serif;
     color: var(--body-text);
     text-align: left;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 
