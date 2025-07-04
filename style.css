@@ -166,10 +166,11 @@ h3  {
 
 /* About page headshot - small and centered */
 .headshot-about {
-    display: center;
+    display: block;
     margin: 0 auto;
     max-width: 33%;
     height: auto;
+    text-align: center;
 }
 
 /* Home page headshot - larger, responsive layout */
