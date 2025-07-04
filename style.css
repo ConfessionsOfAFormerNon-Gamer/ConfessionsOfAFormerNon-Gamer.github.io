@@ -166,7 +166,7 @@ h3  {
 
 /* About page headshot - small and centered */
 .headshot-about {
-    display: block;
+    display: center;
     margin: 0 auto;
     max-width: 33%;
     height: auto;
