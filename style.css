@@ -4,16 +4,11 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 4, 2025
-Tested: July 4, 2025 - Passed validation
+Last Updated: July 6, 2025
+Tested: July 6, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
-    Passed on iPad tablet browsers in Safari, Firefox, and Chrome.
-    Passed on iPhone mobile browsers in Safari, Firefox, and Chrome.
-
-v3: updated footer for better styling on mobile, using media query! :))
-v4: adjusted hero text sizing across breakpoints
-
-*/ 
+    Passed on iPad tablet browsers in xx, xx, and xx
+    Passed on iPhone mobile browsers in xx, xx, and xx */
 
 
 /* ----- CSS RESET ----- */
@@ -190,6 +185,52 @@ h3  {
 }
 
 
+/* ----- BLOCKQUOTE STYLES ----- */
+
+blockquote {
+    background-color: var(--off-white);
+    border-left: 3px solid var(--sapphire-blue);
+    padding: 1.5rem 2rem;
+    margin: 1.5rem auto;
+    font-style: italic;
+    color: var(--dark-slate);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 90%;
+    position: relative;
+}
+
+blockquote em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--dark-slate);
+}
+
+blockquote::after {
+    content: '— Margaret Mead';
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    color: var(--cool-gray);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    blockquote {
+        padding: 2rem 3rem;
+        font-size: 1.2rem;
+        max-width: 85%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    blockquote {
+        max-width: 80%;
+    }
+}
+
 /* ----- FOOTER ELEMENTS ----- */
 
 footer {
@@ -241,6 +282,47 @@ footer a:hover {
 color: var(--footer-link-hover);
 }
 
+/* ----- LIST STYLES - ONLY CONTENT, NOT NAV ----- */
+
+main ul {
+    list-style-type: none; /* had this set up to work with square bullets; did not work across S, FF or Ch */
+    padding-left: 2rem;
+    margin: 1rem 0;
+    color: var(--cool-gray);
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    padding-left: 0.5rem;
+    color: var(--cool-gray);
+    position: relative;
+}
+
+main ul li::before {
+    content: "■";
+    color: var(--sapphire-blue);
+    font-size: 1.1em;
+    position: absolute;
+    left: -1.0rem;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li::before {
+    display: none;
+}
+
 
 /* ----- Components: or "Extra Stuff" ----- */
 
@@ -256,7 +338,7 @@ color: var(--footer-link-hover);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;
-    margin: 20px auto;
+    margin: 0 auto;
     width: 250px;
     text-align: center;
 }
@@ -291,18 +373,14 @@ color: var(--footer-link-hover);
     text-align: center;
 }
 
-
-ul {
-    list-style-type: square;
-}
-
+/* ----- MOBILE RESPONSIVE MEDIA QUERIES ----- */
 
 @media screen and (max-width: 767px) {
+    /* Footer */
     footer {
         font-size: .9rem;
-        text-align: center; /* better UX for mobile, even if I don't like how it looks as well */
-        padding: 1.5rem 1rem; /* better padding for mobile */
-
+        text-align: center;
+        padding: 1.5rem 1rem;
     } 
     
     .footer-links {
@@ -312,46 +390,149 @@ ul {
     footer a {
         display: inline-block;
         padding: 0.25rem 0.5rem;
-        margin: 0.25rem
+        margin: 0.25rem;
+    }
+    
+
+    /* Images */
+    .headshot-about {
+        max-width: 60%;
+        margin-bottom: 1.5rem;
+    }
+
+    .headshot-hero {
+        max-width: 80%;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Headers */
+    .hero-name {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+
+    .welcome-text {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Lists */
+    main ul {
+        padding-left: 1.5rem;
+        margin: 0.75rem 0;
+    }
+
+    main ul li {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+    }
+    
+    main ul li::before {
+        left: -0.75rem;
+        font-size: 1em;
+    }
+
+
+    /* Main Content */
+    main {
+        gap: 0.75rem;
+        padding: 0 0.5rem;
+    }
+
+
+    /* Block Quote */
+    blockquote {
+        margin: 1rem 0.5rem;
+        padding: 1rem 1.5rem; 
+        font-size: 1rem;
     }
 }
 
-/* ----- RESPONSIVE BREAKPOINTS ----- */
 
-/* Hero Subtitle - Medium size for tablet */
+/* ----- TABLET STYLES  - Better spacing for med screens ----- */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    p {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 0.75rem;
+    }
+
+    .welcome-text {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    main {
+        gap: 1rem;
+    }
+
     .hero-subtitle {
         font-size: 1.3rem;
     }
 
-/* CTA Button - Medium size for tablet */
     .cta-button {
         width: 200px;
     }
-    
+}
 
-/* Desktop Styles */
+/* ----- DESKTOP STYLES ----- */
 @media screen and (min-width: 1024px) {
+    main {
+        gap: 1rem !important;
+    }
 
-/* Hero Section - Left Align for Deskopt */
+    p {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    .welcome-text {
+        font-size: 1.2rem !important;
+        font-family: 'Inter', sans-serif !important;
+        margin-bottom: .5rem !important;
+    }
+
+    /* Hero Section - Left Align for Desktop */
     .hero-name, .hero-subtitle {
         text-align: left;
     }
 
-/* Hero Name - Large size for Desktop */
+    /* Hero Name - Larger size for Desktop */
     .hero-name {
         font-size: 3.5rem;
     }
 
-/* Hero Subtitle - Large size for Desktop */  
+    /* Hero Subtitle - Larger size for Desktop */  
     .hero-subtitle {
         font-size: 1.4rem;
     }
 
-/* CTA Button - Larger size for Desktop */  
+    /* CTA Button - Larger size for Desktop */  
     .cta-button {
         width: 250px;
     }
-
 }
 
 
