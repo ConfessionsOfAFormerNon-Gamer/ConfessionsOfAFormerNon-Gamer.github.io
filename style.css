@@ -464,6 +464,13 @@ nav ul li::before {
     text-align: center;
 }
 
+.resume-link:hover,
+.resume-link:focus {
+    background-color: var(--pure-white);
+    color: var(--sapphire-blue);
+    border: 2px solid var(--sapphire-blue);
+}
+
 .cta-button {
     display: inline-block;
     background-color: var(--sapphire-blue);
