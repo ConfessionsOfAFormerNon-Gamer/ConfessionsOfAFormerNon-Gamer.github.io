@@ -612,7 +612,7 @@ nav ul li::before {
     footer {
         font-size: .9rem;
         text-align: center;
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 1rem !important;
     } 
     
     .footer-icon.email {
