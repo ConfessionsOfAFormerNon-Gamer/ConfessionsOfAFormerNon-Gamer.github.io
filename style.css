@@ -968,7 +968,7 @@ nav ul li::before {
     }
 
     /* No-Show Non-Printing Info */
-    nav, .headshot-about, .resume-link, header {
+    nav, .headshot-about, .resume-link, header, .video-container {
         display: none;
     }
 
