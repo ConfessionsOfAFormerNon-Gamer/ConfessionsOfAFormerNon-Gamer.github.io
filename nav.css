@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 25, 2025
-Last Updated: July 6, 2025
-Tested: July 6, 2025 - Passed validation
+Last Updated: July 10, 2025
+Tested: July 10, 2025 - Passed validation
 */
 
 
@@ -15,7 +15,7 @@ Tested: July 6, 2025 - Passed validation
     --charcoal-black: #1a202c;
     --dark-slate: #2c3e50;
     --sapphire-blue: #0369a1;
-    --vibrant-orange: #FF6b35;
+    --vibrant-orange: #ff6b35;
     --cool-gray: #4a5568;
     --medium-gray: #666;
     --off-white: #fdfdfd;
@@ -104,8 +104,6 @@ nav {
 }
 
 
-
-
 /* ----- NAVIGATION MENU (Single System!) ----- */
 /* Mobile: Hidden by default, shows when checkbox is checked */
 .navMenu {
@@ -167,6 +165,7 @@ nav {
     position: relative;
 }
 
+
 .navMenu a::before {
     content: '';
     position: absolute;
@@ -184,54 +183,15 @@ nav {
 }
 
 
-
 /* ----- MOBILE DROPDOWN STYLING ----- */
-.navMenu .mobileHide {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    background-color: var(--off-white);
-    border-radius: 0 0 6px 6px;
+/* Hide dropdown submenu globally - meets instructor requirement */
+@media screen and (max-width: 767px) {
+    .navMenu .mobileHide {
+    display: none !important;
+    }
 }
-
-.navMenu .mobileHide li {
-    padding-left: 1rem;
-    margin: 0;
-}
-
-.navMenu .mobileHide a {
-    font-size: 0.85rem;
-    color: var(--cool-gray);
-    padding: 0.5rem 1rem;
+.navMenu .dropdown {
     position: relative;
-}
-
-/* Orange hover effects for mobile dropdown items */
-.navMenu .mobileHide a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 0;
-    background: var(--vibrant-orange);
-    transition: width 0.3s ease;
-}
-
-.navMenu .mobileHide a:hover::before,
-.navMenu .mobileHide a:focus::before {
-    width: 4px;
-}
-
-.navMenu .mobileHide a:hover {
-    background-color: var(--pure-white);
-    color: var(--sapphire-blue);
-}
-
-/* Current page styling for mobile dropdown */
-.navMenu .mobileHide a.current {
-    background-color: var(--sapphire-blue);
-    color: var(--pure-white);
 }
 
 
@@ -271,8 +231,6 @@ nav {
         position: relative;
     }
     
-
-    
     /* Desktop hover - orange slide under :) */
     .navMenu a::after {
         content: '';
@@ -306,24 +264,19 @@ nav {
     }
     
     /* Reset mobile orange effects for desktop */
-    .navMenu a::before {
+    .navMenu > li > a::before {
         display: none; /* Remove mobile orange left border on desktop */
     }
-    
-    .navMenu .mobileHide a::before {
-        display: block; /* Keep orange effects for desktop dropdown only */
-    }
-    
 
-
-    /* ----- PROJECTS DROPDOWN - DESKTOP ----- */
+    /* ----- PROJECTS DROPDOWN - DESKTOP ONLY ----- */
     .navMenu .dropdown {
         position: relative;
         display: inline-block;
     }
     
+    /* Show submenu on hover - DESKTOP ONLY */
     .navMenu .dropdown:hover .mobileHide {
-        display: block;
+        display: block !important;
     }
     
     /* Bridge trick - prevents missing tricky dropdown */
@@ -337,8 +290,8 @@ nav {
         background: transparent;
     }
     
+    /* Desktop dropdown submenu styling */
     .navMenu .mobileHide {
-        display: none;
         position: absolute;
         top: calc(100% + 18px); /* Perfect positioning below bridge */
         left: 0;
@@ -351,7 +304,6 @@ nav {
         padding: 0.5rem 0;
         z-index: 50;
     }
-    
 
     .navMenu .mobileHide li {
         margin: 0;
@@ -402,7 +354,6 @@ nav {
         padding: 0 40px;
     }
     
-
     .navMenu li {
         margin-left: 2.5rem;
     }
