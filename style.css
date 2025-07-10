@@ -336,26 +336,11 @@ footer {
     font-weight: 400;
     font-size: 0.8rem;
     line-height: 1.5;
-    padding: 20px 20px 0 20px;
+    padding: 20px;
     text-align: left;
     margin-top: 3rem;
-    position: relative;
-}
 
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('content/footer_bg_v2.png');
-    background-repeat: repeat;
-    background-size: 20px 20px;
-    pointer-events: none;
-    z-index: 0;
-
- /* Still EXTRA, but less hard than when I needed to figure it out for the nav box! */
+/* Still EXTRA, but less hard than when I needed to figure it out for the nav box! */
 
     position: relative;
     left: 50%;
