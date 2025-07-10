@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 9, 2025
-Tested: July 9, 2025 - Passed validation
+Last Updated: July 10, 2025
+Tested: July 10, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx */
@@ -359,18 +359,30 @@ footer {
     padding: 20px;
 }
 
-.footer-icon-email {
+.footer-icon.email {
     height: 16px;
     margin-left: 2px;
     margin-right: 4px;
     vertical-align: middle;
 }
 
-.footer-icon-phone {
+.footer-icon.phone {
     height: 22px;
     margin-left: 2px;
     margin-right: 6px;
     vertical-align: middle;
+}
+
+/* Footer Icon Animation */
+.footer-icon.email,
+.footer-icon.phone {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icon.email:hover,
+.footer-icon.phone:hover {
+    transform: scale(1.5);
 }
 
 .footer-links   {
@@ -464,7 +476,6 @@ nav ul li::before {
     text-decoration: none;
     margin: 20px auto;
     text-align: center;
-    /* this button's width will change at breakpoints - need to add media queries below */
 }
 
 .cta-button:hover,
@@ -503,12 +514,40 @@ nav ul li::before {
 }
 
 
+/* ----- RESPONSIVE VIDEO EMBED ----- */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* for 16:9 aspect ratio */
+    height: 0;
+    margin: 1.5rem auto;
+    max-width: 800px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 6px; /* matches button styling! */
+}
+
+/* Mobile Video Adjustments */
+@media screen and (max-width: 767px) {
+    .video-container {
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+}
+
+
 /* ----- MOBILE RESPONSIVE MEDIA QUERIES ----- */
 
 @media screen and (max-width: 767px){
 
     /* Hero Grid for Mobile */
-
 
     .hero-image {
         text-align: center;
@@ -569,13 +608,13 @@ nav ul li::before {
         padding: 1.5rem 1rem;
     } 
     
-    .footer-icon-email {
+    .footer-icon.email {
         height: 14px;
         margin-left: 4px;
         margin-right: 1px;
     }
 
-    .footer-icon-phone {
+    .footer-icon.phone {
         height: 18px;
         margin-left: 2px;
         margin-right: 8px;
@@ -903,6 +942,12 @@ nav ul li::before {
     margin: 1in;
     size: 8.5in 11in;
   }
+
+    /* No Icons */
+    .footer-icon.email,
+    .footer-icon.phone {
+        display: none !important;
+    }
 
     /* Reset Body for Printing */
     body {
