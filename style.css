@@ -327,10 +327,8 @@ blockquote::after {
 /* ----- FOOTER ELEMENTS ----- */
 
 footer {
-    background: 
-        url('content/footer_bg_v2.png') repeat,  /* footer bkgd image - assignment requirement */
-        var(--footer-bg);  
-    background-size: 20px 20px;
+    background: url('content/footer_bg_final.png') repeat; /* footer bkgd image - assignment requirement */
+    background-size: 5px 5px;
     color: var(--footer-text);
     font-family: 'Inter', sans-serif;
     font-weight: 400;
@@ -348,6 +346,7 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
+
 }
 
 
