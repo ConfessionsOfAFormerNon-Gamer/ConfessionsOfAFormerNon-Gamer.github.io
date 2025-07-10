@@ -118,6 +118,7 @@ nav {
     margin: 0;
     padding: 1rem 0;
     z-index: 50;
+    display: none;
 }
 
 /* Show menu when checkbox is checked */
@@ -185,15 +186,16 @@ nav {
 
 /* ----- MOBILE DROPDOWN STYLING ----- */
 /* Hide dropdown submenu globally - meets instructor requirement */
-@media screen and (max-width: 767px) {
-    .navMenu .mobileHide {
-    display: none !important;
-    }
-}
 .navMenu .dropdown {
     position: relative;
 }
 
+/* Hide dropdown submenu on mobile only */
+@media screen and (max-width: 767px) {
+    .navMenu .mobileHide {
+        display: none !important;
+    }
+}
 
 /* RESPONSIVE BREAKPOINTS - SMALL, MED + LARGE SCREENS */
 
@@ -292,6 +294,7 @@ nav {
     
     /* Desktop dropdown submenu styling */
     .navMenu .mobileHide {
+        display: none;
         position: absolute;
         top: calc(100% + 18px); /* Perfect positioning below bridge */
         left: 0;
