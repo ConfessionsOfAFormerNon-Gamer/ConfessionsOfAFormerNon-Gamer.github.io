@@ -327,8 +327,9 @@ blockquote::after {
 /* ----- FOOTER ELEMENTS ----- */
 
 footer {
-    background: var(--footer-bg) url('content/footer_bg_v2.png');  /* footer bkgd image - assignment requirement */
-    background-repeat: repeat;
+    background: 
+        url('content/footer_bg_v2.png') repeat,  /* footer bkgd image - assignment requirement */
+        var(--footer-bg);  
     background-size: 20px 20px;
     color: var(--footer-text);
     font-family: 'Inter', sans-serif;
