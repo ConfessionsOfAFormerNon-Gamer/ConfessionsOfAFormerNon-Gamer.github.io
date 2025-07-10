@@ -348,7 +348,7 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
-
+    filter: contrast(1.5);
 }
 
 
