@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 10, 2025
-Tested: July 10, 2025 - Passed validation
+Last Updated: July 13, 2025
+Tested: July 13, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
     Passed on iPhone mobile browsers in xx, xx, and xx */
@@ -21,6 +21,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    min-height: 100vh;
 }
 
 /* ----- CSS COLOR PALETTE ----- */
@@ -62,6 +63,9 @@ html, body {
 /* ----- MAIN LAYOUT & FONTS ----- */
 
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -71,6 +75,7 @@ body {
 }
 
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -86,17 +91,25 @@ h1, .hero-subtitle, .welcome-text {
     grid-template-columns: 1fr;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex: 1;
 }
 
 .hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     order: 1;
 }
 
 .hero-overflow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     order: 3; /* after photo on mobile */
 }
 
 .hero-image {
+    display: flex;
     order: 2;
     text-align: center;
 }
@@ -104,12 +117,14 @@ h1, .hero-subtitle, .welcome-text {
 
 /* ----- ABOUT.HTML - Flexbox Layout ----- */
 .about-main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 .about-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -123,13 +138,16 @@ h1, .hero-subtitle, .welcome-text {
 
 
 /* ----- REFLECTION.HTML - Flexbox Layout ----- */
-.reflection-main {
+
+.reflection-section {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.reflection-section {
+.reflection-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -346,6 +364,7 @@ footer {
     margin-left: -50vw;
     margin-right: -50vw;
     width: 100vw;
+    flex: 0 0 auto;
 
 }
 
@@ -394,7 +413,8 @@ footer {
 
 footer a { 
 color: var(--footer-links); 
-text-decoration: underline; 
+text-decoration: underline;
+transition: color 0.3s ease; 
 } 
 
 
@@ -609,6 +629,8 @@ nav ul li::before {
 
     /* Footer */
     footer {
+        flex: 0 0 auto;
+        margin-top: auto;
         font-size: .9rem;
         text-align: center;
         padding: 1.5rem 1rem !important;
@@ -1086,4 +1108,316 @@ nav ul li::before {
     p, ul, blockquote {
         page-break-inside: avoid;
     }
+}
+
+/* ----- SMOOTH SCROLLING FOR ANCHOR LINKS ----- */
+ html {
+    scroll-behavior: smooth;
+
+ }
+
+/* ----- PROJECTS PAGE STYLES (NEW 25 0712) ----- */
+
+/* ----- PROJECTS PAGE HEADER ----- */
+.projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    color: var(--cool-gray);
+    font-weight: 500;
+    font-size: 1.5rem !important;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ----- PROJECTS CONTAINER & ARTIFACT CARDS ----- */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background-color: var(--pure-white);
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ----- CARD TEXT CONTENT ----- */
+.card-text {
+    flex: 1;
+}
+
+.goal-label {
+    color: var(--sapphire-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.goal-title {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+.goal-description {
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.goal-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ----- ARTIFACT CONTAINERS ----- */
+
+.artifact-container {
+    background-color: var(--off-white);
+    border-radius: 6px;
+    border: 1px solid var(--medium-gray);
+    padding: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.artifact-heading {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.artifact-image {
+    margin-bottom: 1rem;
+}
+
+.artifact-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.artifact-links {
+    margin: 0;
+    text-align: center;
+}
+
+.artifact-links p {
+    margin: 1rem 0 !important;
+    line-height: 1.6;
+}
+
+.artifact-links p:first-child {
+    margin-top: 0;
+}
+
+.artifact-links p:last-child {
+    margin-bottom: 0;
+}
+
+.artifact-links a {
+    color: var(--sapphire-blue);
+    text-decoration: underline;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.artifact-links a:hover,
+.artifact-links a:focus {
+    color: var(--vibrant-orange);
+}
+
+
+/* ----- PROJECTS PAGE MOBILE STYLES (320-767px) ----- */
+
+@media screen and (max-width: 767px) {
+    .projects-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem !important;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .card-content {
+        gap: 1.5rem;
+    }
+
+    .goal-title {
+        font-size: 1.2rem;
+    }
+
+    .goal-description p {
+        font-size: 0.95rem;
+    }
+
+    .artifact-container {
+        padding: 1rem;
+    }
+
+    .artifact-heading {
+        font-size: 0.95rem;
+    }
+}
+
+/* ----- PROJECTS PAGE TABLET STYLES (768-1023px) ----- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .projects-header {
+        margin-bottom: 4rem;
+    }
+
+    .projects-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.3rem !important;
+    }
+
+    .projects-container {
+        gap: 2.5rem;
+    }
+
+    .project-card {
+        padding: 2.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+/* Tablet: Mixed layout - may go side-by-side if content fits */
+    /* Attempted side-by-side layout but content too long for comfortable reading */
+    
+    /*
+    .card-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .artifact-container {
+        max-width: 300px;
+        justify-self: center;
+    }
+    */
+
+}
+
+/* ----- PROJECTS PAGE DESKTOP STYLES (1024px+) ----- */ 
+
+    @media screen and (min-width: 1024px) {
+
+    .projects-header {
+        margin-bottom: 4rem;
+    }
+
+    .projects-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .projects-container {
+        gap: 3rem;
+    }
+
+    .project-card {
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+    }
+
+/* Desktop: Definite side-by-side layout */
+/* Attempted side-by-side layout but content too long to fit well. Then I started playing with a three-part grid the way I did on my
+index.html and it just didn't feel good. Sticking with a single layout for this page. */
+
+    /*
+.card-content   .card-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+    
+    .artifact-container {
+        max-width: 350px;
+        justify-self: end;
+    }
+    
+    .goal-title {
+        font-size: 1.4rem;
+    }
+    
+    .goal-description p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    } 
+*/
+
+/* ----- PROJECTS PAGE LARGE DESKTOP STYLES (1200px+) ----- */
+
+@media screen and (min-width: 1200px) {
+
+    .projects.container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .projects-card {
+        padding: 3.5rem;
+    }
+    
+    .card-content {
+        gap: 4rem;
+    }
+
 }

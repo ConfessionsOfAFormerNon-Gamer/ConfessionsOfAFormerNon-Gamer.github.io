@@ -1,0 +1,172 @@
+<!--
+***************************************************************************************************
+Title: Goals, Projects & Artifacts Page
+Use: Showcase of learning goals and competencies through IS_LT program
+Author: Becky Roesch
+School/Term: University of Missouri, Summer 2025
+Course: IS_LT 7355 Web Design & Development
+Updated: July 13, 2025
+Developed: July 11, 2025
+Tested: July 13, 2025 - Passed validation
+Passed VI on Mac desktop browsers in xx, xx, and xx.
+Passed VI on iPad tablet browsers in xx, xx, and xx.
+Passed VI on iPhone mobile browsers in xx, xx, and xx. 
+Issues:
+***************************************************************************************************
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projects - Becky Roesch</title>
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <!-- FAVICONS -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+
+        <!-- LINK TO CSS FILES -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="nav.css" type="text/css">
+    </head>
+
+    <body>
+         <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo">
+                    <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+                    <span class="logo-text">Becky Roesch</span>
+                </a>
+
+                <!-- Single Navigation - Checkbox Trick -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" id="hamburger">&#9776;</label>
+            
+                <ul class="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html" class="current">Projects</a>
+                            <ul class="mobileHide">
+                                <li><a href="#goal1">Goal 1</a></li>
+                                <li><a href="#goal2">Goal 2</a></li>
+                                <li><a href="#goal3">Goal 3</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="#contact.html">Contact</a></li>
+                 </ul>
+             </div>
+        </nav>
+
+    <main>
+        <!-- PAGE HEADER-->
+         <section class="projects-header">
+            <h1>Goals, Projects & Artifacts</h1>
+            <p class="page-subtitle">Showcasing competencies developed through the IS-LT Program</p>
+         </section>
+
+         <!-- PROJECTS CONTAINER-->
+        <div class="projects-container">
+
+          <!-- Goal 1 Card-->
+            <article class="project-card" id="goal1">
+                <div class="card content">
+                    <div class="card-text">
+                        <h2 class="goal-label">GOAL 1, OBJECTIVE 1.2</h2>
+                        <h3 class="goal-title">Meaningful Learning & Engagement</h3>
+
+                        <div class="goal-description">
+        
+                            <p><strong>Description:</strong> Learning to design meaningful, engaging educational experiences through game development fundamentally altered my approach to instructional design. Prior to this course, I had no idea how much thought went into creating a game for educational purposes. My prototype<em>Yes, Chef!</em> is a 2-D digital top-down shooter-type game, created for new customer service employees at CompanyName using the Construct 3 game engine. After completing a concise learner analysis, I determined the subject area and learning objectives based on a brief needs analysis provided by the company. Then I designed game objectives, mechanics, and scoring to reinforce the business's training needs. <em>Yes, Chef!</em> is the third game created for IS_LT 7384, <i>Designing Games for Learning,</i> and was a culminating activity for the course objectives. The game includes a light story with a beginning, middle, and end defining how a player progresses to the end of the game. Along with learning the technical aspects of Construct 3, the prototype required substantial asset creation for the game. These included a background, player character, dynamic conveyor belt, and multiple shooter elements. The prototype also includes a title screen and credits, a scoring mechanism, and opportunities to develop further levels, which would elevate the learner’s cycle of expertise.</p><br>
+                            
+                            <p><strong>Reflection:</strong> Prototypes for the two games created earlier in the course felt much more like I was forcing the game to be something it wasn’t, just to match the gaming platform we were tasked with learning. This led me to reexamine what I could bring to this prototype to take fuller advantage of the Construct 3 platform and push my skills further. Player feedback taught me to focus more directly on integrating learners’ needs with the platform’s strengths. This approach works better than forcing the platform to do something it wasn't designed for. This project demonstrates my development in designing educational games for meaningful learning and promoting student engagement.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artifact-container">
+                    <h4 class="artifact-heading">🎮 Project Artifacts</h4>
+                    <div class="artifact-image">
+                        <img src="content/artifact_yes-chef.jpg" alt="Yes Chef! game screenshot showing top-down view gameplay" class="artifact-screenshot">    
+                    </div>
+                    <div class="artifact-links">
+                        <p>▶️ <a href="https://formernongamer.itch.io/yes-chef" target="_blank" rel="noopener">Play <em>Yes, Chef!</em> Game</a></p>
+                        <p>📄 <a href="https://confessionsofaformernongamer.blogspot.com/2024/11/digital-design-process-reflection_21.html" target="_blank" rel="noopener">Read Game Dev Blog Entry</a></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- GOAL 2 CARD -->
+            <article class="project-card" id="goal2">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2 class="goal-label">GOAL 2, OBJECTIVE 2.1</h2>
+                        <h3 class="goal-title">Analytical Methods & Systematic Design</h3>
+                        
+                        <div class="goal-description">
+                            <p><strong>Description:</strong> Mastering the basics of project management dramatically improved how I organize and plan complex educational projects. Through IS_LT 9473 <i>Project Management,</i> I learned that effective project management is essentially applied analytical thinking. My hypothetical Educational Technology Conference project plan demonstrates this competency through comprehensive analytical approaches. I researched needs analyses to identify what stakeholders would require. I completed resource analysis to determine the right people, technology, and budget needed. I performed risk analysis to evaluate potential issues and assigned responsibility for addressing them to hypothetical team members. The project's Work Breakdown Structure (WBS) illustrates how I applied timeline analysis to organize complex project phases. I mapped out dependencies from initial organization and budgeting through conference execution and post-event evaluation. These analytical methods directly informed my approach to systematic planning. They created a structured framework that would guide implementation from start to finish. Project management tools like Gantt charts serve as analytical instruments. This experience demonstrates that project management methodology provides an essential analytical foundation; it supports planning and designing effective learning environments.</p><br>
+
+                            <p><strong>Reflection:</strong> Building a WBS for this hypothetical conference initially seemed deceptively easy. I had strong planning skills coming into the course and drilling down to describe a series of discrete deliverables felt fairly intuitive; it was essentially a detailed outline. Building the WBS into a Gantt chart was daunting. Orchestrating dependencies was incredibly difficult. I had no real-world experience working on a project of this caliber. Although SmartSheet was finicky about some things (for example, capturing the hour:minute a change happened on the chart), using dedicated project management software still made the job significantly easier. I was immediately able to apply many of the skills I honed in this course to my personal and professional life, especially those focused on risk management.</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="artifact-container">
+                        <h4 class="artifact-heading">📊 Project Artifacts</h4>
+                        <div class="artifact-image">
+                            <img src="content/artifact_WBS.png" alt="Work Breakdown Structure diagram for Educational Technology Conference project" class="artifact-screenshot">
+                    </div>
+                        <div class="artifact-links">
+                            <p>📊 <a href="content/artifact_WBS.png" target="_blank" rel="noopener">View WBS Graphic</a></p>
+                            <p>📅 <a href="https://docs.google.com/spreadsheets/d/11NIWvcCsiOdg6HAXMCF77SxBmgC76uYgFL9u7696hdo/edit?usp=sharing" target="_blank" rel="noopener"> View SmartSheet Gantt Chart</a></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- GOAL 3 CARD -->
+            <article class="project-card" id="goal3">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2 class="goal-label">GOAL 3, OBJECTIVE 3.2</h2>
+                        <h3 class="goal-title">Universal Design Principles</h3>
+                        
+                        <div class="goal-description">
+                            <p><strong>Description:</strong> This digital media project from my first class, IS_LT 7361 <i>Introduction to Digital Media,</i> serves as an example of incomplete Universal Design implementation, highlighting the gap between choosing accessible topics and creating accessible products. The assignment required consistent application of proximity, alignment, repetition, and contrast in creating multimedia content. I developed content about Apple's People Detection feature, incorporating video demonstrations, audio narration, text explanations, and graphics to provide multiple means of representation for low-vision iPhone users. While the audio transcript included comprehensive captioning with non-speech audio elements, the font sizing was too small for the target audience. The Google Site hosting this content used inadequate color contrast, cramped layouts, overly small fonts, and lacked alt text for images. The project illustrates the challenge of implementing universal design principles effectively in digital learning environments.</p><br>
+                            
+                            <p><strong>Reflection:</strong> The media I created demonstrates proximity, alignment, repetition and contrast—it's technically correct, even if not exciting. But while my media was often technically correct, it wasn't technically correct for my audience. Despite choosing an excellent accessibility topic, my infographic was cramped and used font sizes that were far too small. This contradiction between content and execution showed me that understanding accessibility requires more than good intentions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="artifact-container">
+                        <h4 class="artifact-heading">🎨 Project Artifacts</h4>
+                        <div class="artifact-image">
+                            <img src="content/artifact_digital-media-gallery.jpg" alt="Digital media gallery screenshot showing accessibility project with Apple People Detection content" class="artifact-screenshot">
+                        </div>
+                        <div class="artifact-links">
+                            <p>🎨 <a href="https://sites.google.com/view/islt7361-b-roesch/project-4-digital-media-gallery" target="_blank" rel="noopener">View Digital Media Gallery Page</a></p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+     <footer>
+        Connect with Becky: 
+        <img src="content/email_icon.png" alt="Email" class="footer-icon footer-icon email"><a href="mailto:rmr677@umsystem.edu?subject=Let%27s%20connect%21">rmr677@umsystem.edu</a> | 
+        <img src="content/phone_icon.png" alt="Phone" class="footer-icon footer-icon phone">1+888-888-8888<br>
+        Built with HTML, CSS, & passion for learning technologies. | © 2025 RM Roesch
+    </footer>
+
+</body>

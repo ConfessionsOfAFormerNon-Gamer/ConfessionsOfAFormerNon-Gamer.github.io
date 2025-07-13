@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 25, 2025
-Last Updated: July 10, 2025
-Tested: July 10, 2025 - Passed validation
+Last Updated: July 13, 2025
+Tested: July 13, 2025 - Passed validation
 */
 
 
@@ -306,6 +306,7 @@ nav {
         margin: 0;
         padding: 0.5rem 0;
         z-index: 50;
+        transform: translateY(-10px);  
     }
 
     .navMenu .mobileHide li {
@@ -323,6 +324,7 @@ nav {
         margin-left: 0;
         border-radius: 0;
         position: relative;
+        min-width: 120px;
     }
     
     /* Orange left border effect for submenu items */
@@ -349,6 +351,11 @@ nav {
     .navMenu .mobileHide a:hover {
         background-color: var(--off-white);
     }
+
+    /* Orange Focus state for dropdown links - Keyboard nav support */
+    .navMenu .mobileHide a:focus {
+        outline: 2px solid var(--vibrant-orange);
+        outline-offset: 2px;
 }
 
 /* BIG Desktop - Premium spacing 1024+ */
@@ -365,4 +372,5 @@ nav {
         font-size: 1rem;
         padding: 0.75rem 1.25rem;
     }
+}
 }
