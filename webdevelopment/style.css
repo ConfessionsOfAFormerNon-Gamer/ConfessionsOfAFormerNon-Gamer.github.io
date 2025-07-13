@@ -4,27 +4,42 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: June 18, 2025
-Tested: June 18, 2025 - Passed validation
+Last Updated: July 13, 2025
+Tested: July 13, 2025 - Passed validation
     Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
     Passed on iPad tablet browsers in xx, xx, and xx
-    Passed on iPhone mobile browsers in xx, xx, and xx
+    Passed on iPhone mobile browsers in xx, xx, and xx */
 
-I know this is way more than what the assignment asked for but it was just so cool. I got started and it was a 'Ooh, what if I do THIS?? Or what about THIS??
 
-*/
+/* ----- CSS RESET ----- */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+}
+
+/* ----- CSS COLOR PALETTE ----- */
 
 :root {
- 
-/*color palette*/
+/* Basic Colors */
+
     --charcoal-black: #1a202c;
     --dark-slate: #2c3e50;
     --sapphire-blue: #0369a1;
-    --vibrant-orange: #FF6b35;
+    --vibrant-orange: #ff6b35;
     --cool-gray: #4a5568;
     --medium-gray: #666;
     --off-white: #fdfdfd;
     --pure-white: #ffffff;
+
+ 
+    /* Variable Color Names */
 
     --primary-color: var(--sapphire-blue); 
     --accent-color: var(--vibrant-orange); 
@@ -38,46 +53,120 @@ I know this is way more than what the assignment asked for but it was just so co
     --nav-links: var(--sapphire-blue);
     --body-links: var(--sapphire-blue);
     --buttons: var(--pure-white);
+    --footer-bg: var(--dark-slate);
+    --footer-text: var(--pure-white);
+    --footer-links: var(--pure-white);
+    --footer-link-hover: var(--vibrant-orange);
 
 }
 
-h1  {
-    color: var(--page-titles);
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 1.2;
+/* ----- MAIN LAYOUT & FONTS ----- */
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: var(--body-text);
+    text-align: left;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+h1, .hero-subtitle, .welcome-text {
+    text-align: center;
+}
+
+/* ----- INDEX.HTML - Grid "HERO" Layout Now: with Text Flow  ----- */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+
+.hero-overflow {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    order: 3; /* after photo on mobile */
+}
+
+.hero-image {
+    display: flex;
+    order: 2;
+    text-align: center;
 }
 
 
-h2  {
-    color: var(--page-titles);
-    font-weight: 600;
-    font-size: 2rem;
-    line-height: 1.2;
+/* ----- ABOUT.HTML - Flexbox Layout ----- */
+.about-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resume-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
-h3  {
-    color: var(--section-headings);
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.3;
+/* ----- REFLECTION.HTML - Flexbox Layout ----- */
 
+.reflection-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.reflection-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 
+/* ----- FONTS ORDER/HIERARCHY----- */
+
+/* Hero Name - BIG heading for name on index.html */
 .hero-name {
     color: var(--heading-color);
     font-weight: 700;
     font-size: 3.5rem;
     line-height: 1.1;
-    
 }
 
 
-.hero-subtitle  {
+/* Hero Subtitle - on index.html */
+.hero-subtitle {
     color: var(--hero-subtitle);
     font-weight: 500;
     font-size: 1.4rem;
@@ -85,8 +174,37 @@ h3  {
 }
 
 
-.welcome-text   {
+/* Page Titles - H1 revamp */
+h1  {
+    color: var(--page-titles);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
 
+}
+
+
+/* Section Headings - H2 revamp */
+h2  {
+    color: var(--page-titles);
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.2;
+
+}
+
+
+/* Subsection Headings - H3 revamp */
+h3  {
+    color: var(--section-headings);
+    font-weight: 600;
+    font-size: 1.5rem;
+
+}
+
+
+/* Welcome Text - fancy */
+.welcome-text {
     color: var(--welcome-text);
     font-weight: 600;
     font-size: 1.2rem;
@@ -94,27 +212,1204 @@ h3  {
 }
 
 
+/* Body Text - duh */
 .body-text   {
-
     color: var(--body-text);
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.7;
 }
 
-.nav-links   {
 
+/* Navigation - duh */
+.nav-links   {
     color: var(--nav-links);
     font-weight: 500;
     font-size: .95rem;
     line-height: 1.5;
 }
 
-.body-links   {
 
+/* Body links - duh */
+.body-links   {
     color: var(--body-links);
     font-weight: 400;
     font-size: 1.1rem;
     line-height: 1.7;
 }
 
+
+/* ----- EDUCATION TABLE STYLES ----- */
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.education-table th {
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid var(--medium-gray);
+}
+
+.education-table td {
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border: 1px solid var(--medium-gray);
+    line-height: 1.4;
+}
+
+.education-table tr:hover {
+    background-color: var(--off-white);
+}
+
+
+/* ----- IMAGE STYLES ----- */
+
+/* About page headshot - small and centered */
+.headshot-about {
+    display: block;
+    margin: 0 auto;
+    max-width: 33%;
+    height: auto;
+    text-align: center;
+}
+
+/* Home page headshot - size based on layout */
+.headshot-hero {
+    display: block;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+
+
+/* ----- BLOCKQUOTE STYLES ----- */
+
+blockquote {
+    background-color: var(--off-white);
+    border-left: 3px solid var(--sapphire-blue);
+    padding: 1.5rem 2rem;
+    margin: 1.5rem auto;
+    font-style: italic;
+    color: var(--dark-slate);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    max-width: 90%;
+    position: relative;
+    align-self: center;
+    width: fit-content;
+    min-width: min(300px, 85%);
+}
+
+blockquote em {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--dark-slate);
+}
+
+blockquote::after {
+    content: '— Margaret Mead';
+    display: block;
+    margin-top: 1rem;
+    font-style: normal;
+    color: var(--cool-gray);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+    blockquote {
+        padding: 2rem 3rem;
+        font-size: 1.2rem;
+        max-width: 85%;
+        min-width: min(400px, 80%);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    blockquote {
+        max-width: 80%;
+        min-width: min(500px, 75%);
+    }
+}
+
+/* ----- FOOTER ELEMENTS ----- */
+
+footer {
+    background: url('content/footer_bg_final.png') repeat; /* footer bkgd image - assignment requirement */
+    background-size: 5px 5px;
+    color: var(--footer-text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 20px;
+    text-align: left;
+    margin-top: 3rem;
+
+/* Still EXTRA, but less hard than when I needed to figure it out for the nav box! */
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    flex: 0 0 auto;
+
+}
+
+
+/* Footer [Inside Container] */
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-icon.email {
+    height: 16px;
+    margin-left: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.footer-icon.phone {
+    height: 22px;
+    margin-left: 2px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+/* Footer Icon Animation */
+.footer-icon.email,
+.footer-icon.phone {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.footer-icon.email:hover,
+.footer-icon.phone:hover {
+    transform: scale(1.5);
+}
+
+.footer-links   {
+    color: var(--footer-links);
+    font-weight: 400;
+    font-size: .8rem;
+    line-height: 1.5;
+
+}
+
+footer a { 
+color: var(--footer-links); 
+text-decoration: underline;
+transition: color 0.3s ease; 
+} 
+
+
+footer a:hover { 
+color: var(--footer-link-hover);
+}
+
+/* ----- LIST STYLES - ONLY CONTENT, NOT NAV ----- */
+
+main ul {
+    list-style-type: none; /* had this set up the easy way to work with square bullets; did not work across S, FF or Ch */
+    padding-left: 2rem;
+    margin: 1rem 0;
+    color: var(--cool-gray);
+}
+
+ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    padding-left: 0.5rem;
+    color: var(--cool-gray);
+    position: relative;
+}
+
+main ul li::before {
+    content: "■";
+    color: var(--sapphire-blue);
+    font-size: 1.1em;
+    position: absolute;
+    left: -1.0rem;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li::before {
+    display: none;
+}
+
+
+/* ----- Components: or "Extra Stuff" ----- */
+
+/* Buttons */
+
+.resume-link {
+    display: block;
+    background-color: var(--sapphire-blue);
+    color: var(--buttons);
+    border: 2px solid var(--buttons);
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 250px;
+    text-align: center;
+}
+
+.resume-link:hover,
+.resume-link:focus {
+    background-color: var(--pure-white);
+    color: var(--sapphire-blue);
+    border: 2px solid var(--sapphire-blue);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--sapphire-blue);
+    color: var(--buttons);
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: var(--pure-white);
+    color: var(--sapphire-blue);
+    border: 2px solid var(--sapphire-blue);
+}
+
+
+.submit-button {
+    display: block;
+    background-color: var(--sapphire-blue);
+    color: var(--buttons);
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 100%;           /* Full width */
+    text-align: center;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+    background-color: var(--pure-white);
+    color: var(--sapphire-blue);
+    border: 3px solid var(--sapphire-blue);
+}
+
+/* Hero Overflow Button Styles */
+
+.hero-overflow .cta-button {
+    width: 100%;
+    margin: 2rem 0 0 0;
+}
+
+
+/* ----- RESPONSIVE VIDEO EMBED ----- */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* for 16:9 aspect ratio */
+    height: 0;
+    margin: 1.5rem auto;
+    max-width: 800px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 6px; /* matches button styling! */
+}
+
+/* Mobile Video Adjustments */
+@media screen and (max-width: 767px) {
+    .video-container {
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+}
+
+
+/* ----- MOBILE RESPONSIVE MEDIA QUERIES ----- */
+
+@media screen and (max-width: 767px){
+
+    /* Hero Grid for Mobile */
+
+    .hero-image {
+        text-align: center;
+        order: 1; /* first on mobile stack */
+    }
+
+    .headshot-hero {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+        margin: 0 auto;
+        margin-top: 3.4rem;
+    }
+
+    .hero-content {
+        order: 2; /* second on mobile */
+    }
+
+
+    .hero-section  .hero-name {
+        margin-top: 0;        /* ← Remove browser default */
+        margin-bottom: 0.25rem; /* ← Control spacing to subtitle */
+    }
+
+    .hero-overflow .cta-button {
+    width: 80%;
+    margin: 1.5rem auto 0 auto;
+    display: block !important;
+    }
+}
+
+  
+    /* Ed Table for Mobile */
+    .education-table {
+        font-size: 0.85rem;
+    }
+
+    .education-table th,
+    .education-table td {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    /* About Content - for Mobile */
+    .about-content {
+        gap: 1rem;
+    }
+
+    .resume-links {
+        gap: 0.75rem;
+    }
+
+
+    /* Footer */
+    footer {
+        flex: 0 0 auto;
+        margin-top: auto;
+        font-size: .9rem;
+        text-align: center;
+        padding: 1.5rem 1rem !important;
+        position: relative;
+    } 
+    
+    .footer-icon.email {
+        height: 14px;
+        margin-left: 4px;
+        margin-right: 1px;
+    }
+
+    .footer-icon.phone {
+        height: 18px;
+        margin-left: 2px;
+        margin-right: 8px;
+    }
+
+    .footer-links {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem;
+    }
+
+
+    /* Images */
+    .headshot-about {
+        max-width: 60%;
+        margin-bottom: 1.5rem;
+    }
+
+    .headshot-hero {
+        max-width: 80%;
+        margin-bottom: 1rem;
+    }
+
+
+    /* Headers */
+    .hero-name {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        color: var(--hero-subtitle);
+        font-weight: 500;
+        font-size: 1.4rem !important;
+        line-height: 1.3;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 0.75rem;
+    }
+
+    .welcome-text {
+        font-size: 1.1rem;
+        padding: 0 0.5rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    /* Lists */
+    main ul {
+        padding-left: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    main ul li {
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+    }
+    
+    main ul li::before {
+        left: -0.75rem;
+        font-size: 1em;
+    }
+
+
+    /* Main Content */
+    main {
+        gap: 0;
+        padding: 0 0.5rem;
+    }
+
+
+    /* Block Quote */
+    blockquote {
+        margin: 0.75rem 0.5rem;
+        padding: 1rem 1.5rem; 
+        font-size: 1rem;
+    }
+
+
+/* ----- TABLET STYLES  - Better spacing for med screens ----- */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    /* Hero Grid - Tablet - Single Column */
+    .hero-section {
+        grid-template-columns: 1fr; /* single column, like mobile; I just couldn't get what I wanted, and in the end it was cleaner to to it this way */
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "photo" 
+            "content"
+            "overflow";
+    }
+
+    .hero-image {
+        grid-area: photo;
+        order: 1;
+        text-align: center !important;
+    }
+
+    .hero-content {
+        grid-area: content;
+        order: 2;
+    }
+
+    .hero-overflow {
+        grid-area: overflow;
+        order: 3;
+    }
+
+    .hero-section .hero-name {
+        margin-bottom: 2rem;
+    }
+
+    .hero-content h1,
+    .hero-content .hero-subtitle {
+        text-align: center;
+    }
+
+    .headshot-hero {
+        width: 300px;
+        height: auto;
+        margin-top: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem !important;
+        margin-top: -2rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    p {
+        font-size: 1.05rem;
+        line-height: 1.65;
+        margin-bottom: 0.75rem;
+    }
+
+    .welcome-text {
+        font-size: 1.15rem;
+        margin-bottom: 0.75rem;
+    }
+
+    main {
+        gap: 0;
+    }
+
+    .cta-button {
+        width: 100%;
+        margin: 1.5rem 0 0 0;
+    }
+
+    footer {
+        text-align: left;
+    }
+}
+
+/* ----- DESKTOP STYLES ----- */
+@media screen and (min-width: 1024px) {
+
+
+    /* Hero Grid - Desktop Two-Column */
+    .hero-section {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "content photo"
+            "overflow overflow";
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .hero-content {
+        grid-area: content;
+    }
+
+    .hero-overflow {
+        grid-area: overflow;
+    }
+
+    .hero-image {
+        grid-area: photo;
+        align-self: start; /* keeps photo at top of grid */
+    }
+
+    .hero-section .hero-name {
+        margin-bottom: 2.5rem;
+    }
+
+    .headshot-hero {
+        width: 320px;
+        height: auto;
+        margin-top: 3.4rem;
+    }
+
+    .hero-content h1,
+    .hero-content .hero-subtitle {
+        text-align: left;
+    }
+
+    .hero-content .welcome-text {
+        text-align: center;
+    }
+
+    main {
+        gap: 0 !important;
+    }
+
+    p {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+        margin-bottom: 0.5rem !important;
+        margin-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-top: 0 !important;
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    .welcome-text {
+        font-size: 1.2rem !important;
+        font-family: 'Inter', sans-serif !important;
+        margin-bottom: .5rem !important;
+    }
+
+    /* Hero Name - Larger size for Desktop */
+    .hero-name {
+        font-size: 3.5rem;
+    }
+
+    /* Hero Subtitle - Larger size for Desktop */  
+    .hero-subtitle {
+        font-size: 1.7rem !important;
+        font-weight: 500 !important;
+        line-height: 1.3 !important;
+        margin-top: -2.25rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    /* CTA Button - Larger size for Desktop */  
+    .cta-button {
+        width: 100%;
+        margin: 2rem 0 0 0;
+    }
+
+    footer {
+        text-align: left;
+    }
+}
+
+
+/* ----- REFLECTION PAGE STYLES ----- */
+
+/* Box Model - Container for ALL reflection.html content */
+    .reflection-content {
+        background-color: var(--pure-white);
+        padding: 2rem;
+        margin: 2rem 0;
+        border-radius: 6px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+    }
+
+
+/* Drop Cap: first letter, first paragraph */
+    .reflection-content .first-paragraph::first-letter {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--sapphire-blue);
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.6rem;
+    margin-top: 0.2rem;
+    }
+
+
+/* Text Indent - ALLLLLL paragraphs except first */
+    .reflection-content p:not(.first-paragraph){
+        text-indent: 1.5rem;
+    }
+
+
+/* Readable spacing for all paragraphs, per specs */
+    .reflection-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.7rem;
+    }
+
+
+/* H2 headings inside reflection content */
+    .reflection-content h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-slate);
+    }
+
+
+/* First H2 doesn't need a top margin, coming off the H1 spacing */
+    .reflection-content h2:first-of-type {
+        margin-top: 0;
+    }
+
+
+/* ----- ABOUT PAGE PRINT STYLES ----- */
+
+@media print {
+    /* 1" Page Margins */
+    @page {
+    margin: 1in;
+    size: 8.5in 11in;
+  }
+
+    /* No Icons */
+    .footer-icon.email,
+    .footer-icon.phone {
+        display: none !important;
+    }
+
+    /* Reset Body for Printing */
+    body {
+        font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+        color: #000000;
+        background: white;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        line-height: 1.4;
+    }
+
+    /* No-Show Non-Printing Info */
+    nav, .headshot-about, .resume-link, .video-container {
+        display: none;
+    }
+
+    /* Main content adjustments */
+    main {
+        display: block;
+        margin: 0;
+        padding: 0;
+        gap: 0 !important;
+    }
+
+    /* Heading styles for print */
+    h1 {
+        font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+        color: #000000;
+        font-size: 20pt;
+        font-weight: 600;
+        margin: 0 0 12pt 0;
+        text-align: left;
+        page-break-after: avoid;
+    }
+
+    /* Paragraph styles for print */
+    p {
+        font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+        color: #000000;
+        font-size: 11pt;
+        line-height: 1.4;
+        margin: 0 0 8pt 0;
+        text-align: left;
+        orphans: 2;
+        widows: 2;
+    }
+
+    /* List styles for print */
+    main ul {
+        font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+        color: #000000;
+        font-size: 11pt;
+        line-height: 1.4;
+        margin: 8pt 0;
+        padding-left: 20pt;
+        list-style-type: disc !important;
+        page-break-inside: avoid;
+    }
+
+    main ul li {
+        color: #000000;
+        margin-bottom: 4pt;
+        padding: 0;
+        position: static;
+    }
+
+    ul li::before { 
+        display: none !important;
+    }
+
+    /* Blockquote styles for print */ 
+    blockquote {
+    font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+    color: #000000;
+    font-size: 11pt;
+    font-style: italic;
+    margin: 12pt 20pt;
+    padding: 8pt 12pt;
+    border-left: 2pt solid #000000;
+    background: none;
+    text-align: left;
+    page-break-inside: avoid;
+    }
+
+    blockquote em {
+        color: #000000;
+        font-weight: 600;
+    }
+
+    blockquote::after {
+        content: '— Margaret Mead';
+        display: block;
+        margin-top: 6pt;
+        font-style: normal;
+        color: #000000;
+        font-size: 10pt;
+        font-weight: 400;
+    }
+
+     /* Footer styles for print */   
+    footer {
+    font-family: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+    color: #000000;
+    font-size: 10pt;
+    background: none;
+    margin: 16pt 0 0 0;
+    padding: 8pt 0 0 0;
+    border-top: 1pt solid #000000;
+    text-align: left;
+    position: static;
+    width: auto;
+    left: auto !important;
+    right: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important; 
+    }
+
+    footer a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    /* Avoid Breaking Bad */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    p, ul, blockquote {
+        page-break-inside: avoid;
+    }
+}
+
+/* ----- SMOOTH SCROLLING FOR ANCHOR LINKS ----- */
+ html {
+    scroll-behavior: smooth;
+
+ }
+
+/* ----- PROJECTS PAGE STYLES (NEW 25 0712) ----- */
+
+/* ----- PROJECTS PAGE HEADER ----- */
+.projects-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projects-header h1 {
+    color: var(--charcoal-black);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    color: var(--cool-gray);
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* ----- PROJECTS CONTAINER & ARTIFACT CARDS ----- */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    background-color: var(--pure-white);
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ----- CARD TEXT CONTENT ----- */
+.card-text {
+    flex: 1;
+}
+
+.goal-label {
+    color: var(--sapphire-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.goal-title {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+.goal-description {
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.goal-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ----- ARTIFACT CONTAINERS ----- */
+
+.artifact-container {
+    background-color: var(--off-white);
+    border-radius: 6px;
+    border: 1px solid var(--medium-gray);
+    padding: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.artifact-heading {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+    display: block;
+    margin: 0.5rem 0 2rem 0;
+}
+
+.artifact-image {
+    margin-bottom: 1rem;
+}
+
+.artifact-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: block;
+}
+
+.artifact-links {
+    margin: 0;
+    text-align: center;
+}
+
+.artifact-links p {
+    margin: 1rem 0 !important;
+    line-height: 1.6;
+}
+
+.artifact-links p:first-child {
+    margin-top: 0;
+}
+
+.artifact-links p:last-child {
+    margin-bottom: 0;
+}
+
+.artifact-links a {
+    color: var(--sapphire-blue);
+    text-decoration: underline;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.artifact-links a:hover,
+.artifact-links a:focus {
+    color: var(--vibrant-orange);
+}
+
+
+/* ----- PROJECTS PAGE MOBILE STYLES (320-767px) ----- */
+
+@media screen and (max-width: 767px) {
+    .projects-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .card-content {
+        gap: 1.5rem;
+    }
+
+    .goal-title {
+        font-size: 1.2rem;
+    }
+
+    .goal-description p {
+        font-size: 0.95rem;
+    }
+
+    .artifact-container {
+        padding: 1rem;
+    }
+
+    .artifact-heading {
+        font-size: 0.95rem;
+    }
+}
+
+/* ----- PROJECTS PAGE TABLET STYLES (768-1023px) ----- */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .projects-header {
+        margin-bottom: 4rem;
+    }
+
+    .projects-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .projects-container {
+        gap: 2.5rem
+    }
+
+    .project-card {
+        padding: 2.5rem;
+    }
+
+/* Tablet: Mixed layout - may go side-by-side if content fits */
+    /* Attempted side-by-side layout but content too long for comfortable reading */
+    
+    /*
+    .card-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .artifact-container {
+        max-width: 300px;
+        justify-self: center;
+    }
+    */
+
+}
+
+/* ----- PROJECTS PAGE DESKTOP STYLES (1024px+) ----- */ 
+
+    @media screen and (min-width: 1024px) {
+
+    .projects-header {
+        margin-bottom: 4rem;
+    }
+
+    .projects-header h1 {
+        font-size: 3rem;
+    }
+
+    .page-subtitle {
+        font-size: 1.4rem;
+    }
+
+    .projects-container {
+        gap: 3rem;
+    }
+
+    .project-card {
+        padding: 3rem;
+    }
+    }
+
+/* Desktop: Definite side-by-side layout */
+/* Attempted side-by-side layout but content too long to fit well. Then I started playing with a three-part grid the way I did on my
+index.html and it just didn't feel good. Sticking with a single layout for this page. */
+
+    /*
+.card-content   .card-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+    
+    .artifact-container {
+        max-width: 350px;
+        justify-self: end;
+    }
+    
+    .goal-title {
+        font-size: 1.4rem;
+    }
+    
+    .goal-description p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    } 
+*/
+
+/* ----- PROJECTS PAGE LARGE DESKTOP STYLES (1200px+) ----- */
+
+@media screen and (min-width: 1200px) {
+
+    .projects.container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .projects-card {
+        padding: 3.5rem;
+    }
+    
+    .card-content {
+        gap: 4rem;
+    }
+
+}

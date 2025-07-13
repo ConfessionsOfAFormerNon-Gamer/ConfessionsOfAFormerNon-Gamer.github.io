@@ -1,75 +1,125 @@
 <!--
-*********************************************************************************
+***************************************************************************************************
 Title: Welcome Page
 Use: Introduction to the portfolio site iteself
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: June 18, 2025
+Updated: July 13, 2025
 Developed: June 14, 2025
-Tested: June 18, 2025:
-    Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
-    Passed on iPad tablet browsers in xx, xx, and xx
-    Passed on iPhone mobile browsers in xx, xx, and xx
-*********************************************************************************
+Tested: July 13, 2025 - Passed validation
+Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
+Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
+Passed VI on iPhone mobile browsers in Safari; 
+    Firefox cut off logotype on left edge; Chrome had too small "Let's Connect" in landscape view.
+***************************************************************************************************
 -->
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
         <meta charset="utf-8">
-        <title>Portfolio Welcome</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio Welcome - Becky Roesch</title>
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <!-- FAVICONS -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+
 
         <!-- LINK TO CSS FILE -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="nav.css" type="text/css">
 
-        <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-    <!--
-    <header>
-
-        <section>
-            This content is commented out and won't display.
-                <h1>Header: My Name Should Be Here</h1>
-            I would really rather not have a header above my nav section here. Is that an option? I've included it for the sake of this assignment. I wouldn't mind "Becky Roesch," smaller at the top left, and then my nav links at the right.
-        </section>
-    </header>
-        -->
-
-
     <nav>
-        <!-- navigation links will go here -->
+<!-- Navigation -->
+    
+    <div class="nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="nav-logo">
+            <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+            <span class="logo-text">Becky Roesch</span>
+        </a>
 
-    </nav>
+    <!-- Single Navigation - Checkbox Trick :) -->
 
-    <main>
-        <!-- HERO SECTION START -->
-        <!-- When you said "Add the Content for your Home Page," I took that to mean our copy, not our creative. If not, please advise.
-        Use this info for CSS later:
-        H1      Name     Inter 700 (bold), 3.5rem, dark charcoal (#1a202c)
-        H2      Subtitle   Inter 500 (medium), 1.4rem, sapphire blue (#2980b9)
-        H3      Welcome    Inter 600 (semi-bold), 1.2rem, dark gray (#2c3e50)
-        H4      Body       Inter 400 (regular), 1.1rem, medium gray (#4a5568) 
-        -->
-        <h1 class="hero-name">Becky Roesch</h1>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
         
-        <p class="hero-subtitle">Learning Technologies Student</p>
+        <ul class="navMenu">
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <a href="projects.html">Projects</a>
+                <ul class="mobileHide">
+                    <li><a href="projects.html#goal1">Goal 1</a></li>
+                    <li><a href="projects.html#goal2">Goal 2</a></li>
+                    <li><a href="projects.html#goal3">Goal 3</a></li>
+                </ul>
+            </li>
+            <li><a href="reflection.html">Reflection</a></li>
+            <li><a href="#contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-        <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
+<main>
 
-        <p>This website showcases my journey through the Learning Technologies and Design program at the University of Missouri. There I've developed expertise in researching learner needs, designing engaging online instruction, and using cutting-edge technologies like VR and game-based learning to create memorable training experiences. As someone who believes in meeting learners where they are and inspiring them to go farther, I've built this portfolio to demonstrate how my education has enhanced both my professional capabilities and personal approach to solving complex problems.</p>
+        <!--    HERO SECTION START    -->
 
-        <p>Here you'll see how my background as a teacher-turned-marketer influences my project choices. You can explore artifacts that highlight my core competencies in instructional design and technology integration, and learn more about my philosophy of designing clear, practical solutions to solve problems and facilitate authentic learning. Whether you're a potential employer looking for someone to onboard and educate technology clients, or a fellow educator interested in learning design, this site offers insight into how I transform educational challenges into engaging, results-driven experiences that help people and organizations thrive.</p>
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <h1 class="hero-name">Becky Roesch</h1>
+        
+                <p class="hero-subtitle">Learning Technologies Student</p>
+
+                <p class="welcome-text">Welcome! I'm passionate about creating learning experiences that truly make a difference in people's lives and careers.</p>
+
+                <p>This website showcases my journey through the Learning Technologies and Design program at the University of Missouri. There I've developed expertise in researching learner needs, designing engaging online instruction, and using cutting-edge technologies like VR and game-based learning to create memorable training experiences. As someone who believes in meeting learners where they are and inspiring them to go farther, I've built this portfolio to demonstrate how my education has enhanced both my professional capabilities and personal approach to solving complex problems.</p>
+
+            </div>
+            
+                <!-- Overflow content for lower-right grid area -->
+
+            <div class="hero-overflow">
+
+            
+                <p>You'll see how my background as a teacher-turned-marketer influences my project choices. You can explore artifacts that highlight my core competencies in instructional design and technology integration, and learn more about my philosophy of designing clear, practical solutions to solve problems and facilitate authentic learning. Whether you're a potential employer looking for someone to onboard and educate technology clients, or a fellow educator interested in learning design, this site offers insight into how I transform educational challenges into engaging, results-driven experiences that help people and organizations thrive.</p>
+        
+                <a href="#projects" class="cta-button">View My Work</a>
+            
+            </div>
+            
+             <div class="hero-image">
+
+                <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch professional headshot" class="headshot-hero">
+            
+            </div>  
+        
+        </section>
+
         <!-- HERO SECTION END -->
+         
     </main>
 
     <footer>
-        <!-- slight variance among footer content for different display sizes -->
-
-        © 2025 Becky Roesch | <a href="mailto:rmr677@umsystem.edu">Let's connect!</a><br>
-        Built with HTML, CSS, and passion for learning technologies.
-
+        Connect with Becky: 
+        <img src="content/email_icon.png" alt="Email" class="footer-icon footer-icon email"><a href="mailto:rmr677@umsystem.edu?subject=Let%27s%20connect%21">rmr677@umsystem.edu</a> | 
+        <img src="content/phone_icon.png" alt="Phone" class="footer-icon footer-icon phone">1+888-888-8888<br>
+        Built with HTML, CSS, & passion for learning technologies. | © 2025 RM Roesch
     </footer>
 
 </body>

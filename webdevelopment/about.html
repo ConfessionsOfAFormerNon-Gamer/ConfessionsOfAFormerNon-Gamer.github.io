@@ -1,62 +1,118 @@
 <!--
-*********************************************************************************
+***************************************************************************************************
 Title: About Page
 Use: Introduction to the portfolio's coder and author, Becky Roesch
 Author: Becky Roesch
 School/Term: University of Missouri, Summer 2025
 Course: IS_LT 7355 Web Design & Development
-Updated: June 18, 2025
+Updated: July 10, 2025
 Developed: June 3, 2025
-Tested: June 18, 2025:
-    Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
-    Passed on iPad tablet browsers in xx, xx, and xx
-    Passed on iPhone mobile browsers in xx, xx, and xx
-*********************************************************************************
+Tested: July 10, 2025 - Passed validation
+Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
+Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
+Passed VI on iPhone mobile browsers in Safari; 
+    Firefox cut off logotype on left edge; Chrome had too small "Let's Connect" in landscape view.
+***************************************************************************************************
 -->
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
         <meta charset="utf-8">
-        <title>An Introduction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>An Introduction - Becky Roesch</title>
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <!-- FAVICONS -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+
 
         <!-- LINK TO CSS FILE -->
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="nav.css" type="text/css">
+
 
 </head>
 
 <body>
-    
-    <header>
-        <!-- 
-        I would really rather not have a header above my nav section here. 
-        Is that an option? I've included it for the sake of this assignment. 
-        I wouldn't mind "Becky Roesch," smaller at the top left, and then my 
-        nav links at the right. Please advise -->
-
-        <h1>Still Learning, Always Growing</h1>
-    </header>
-
     <nav>
-        <!-- navigation links will go here -->
+<!-- Navigation -->
+
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="nav-logo">
+                <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+                <span class="logo-text">Becky Roesch</span>
+            </a>
+
+<!-- Single Navigation - Checkbox Trick :) -->
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
+        
+            <ul class="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="current">About</a></li>
+                <li class="dropdown">
+                <a href="projects.html">Projects</a>
+                <ul class="mobileHide">
+                    <li><a href="projects.html#goal1">Goal 1</a></li>
+                    <li><a href="projects.html#goal2">Goal 2</a></li>
+                    <li><a href="projects.html#goal3">Goal 3</a></li>
+                </ul>
+            </li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="#contact.html">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <!-- professional headshot will go here -->
+        <header>
+            <h1>An Introduction</h1>
+        </header>
 
-        <p>I'm Becky Roesch, a teacher at heart and marketer by trade. My career spans classroom teaching, Apple retail training and customer education. In my current role, I'm a marketer. I help shape our customers' views with my background in education and training. I <b>create clear solutions</b> for complex problems and <b>provide proactive support</b> with creativity. My actions build relationships, and those relationships drive results.<br>I'm finishing my Masters in Information Science and Learning Technology at the University of Missouri Columbia this fall. I completed a Chancellor's Certificate in Electronic Arts & Publishing at the University of Missouri St. Louis. I earned my BS.Ed in Elementary Education (with an English minor) from Northwest Missouri State University.</p>
-        <p>My favorite quote comes from cultural anthropologist Margaret Mead:</p>
+        <!-- professional headshot here -->
+            <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch's professional headshot" class="headshot-about">
+
+            <p>I'm Becky Roesch, a teacher at heart and marketer by trade. My career spans classroom teaching, Apple retail training and customer education. In my current role, I'm a marketer. I help shape our customers' views with my background in education and training. I <b>create clear solutions</b> for complex problems and <b>provide proactive support</b> with creativity. My actions build relationships, and those relationships drive results.</p>
+            <p>I'm finishing my Masters in Information Science and Learning Technology at the University of Missouri Columbia this fall. I completed a Chancellor's Certificate in Electronic Arts & Publishing at the University of Missouri St. Louis. I earned my BS.Ed in Elementary Education (with an English minor) from Northwest Missouri State University.</p>
+            <p>My favorite quote comes from cultural anthropologist Margaret Mead:</p>
     
-        <blockquote>"Children must be taught <em>how</em> to think, not <em>what</em> to think."</blockquote>
+            <blockquote>"Children must be taught <em>how</em> to think, not <em>what</em> to think."</blockquote>
     
-        <p>I focus on meeting learners where they are and inspiring them to go farther. These twin philosophies guide my approach to learning and customer support. After graduating I’m considering a handful of directions I could take professionally, potentially including onboarding and educating clients for a technology firm.</p>
-    </main>
+            <p>I focus on meeting learners where they are and inspiring them to go farther. This sentiment, coupled with Mead's directive, guides my approach to learning and customer support. After graduating I'm considering a handful of directions I could take professionally, potentially including:</p>
+            <ul>
+                <li>Client onboarding and training, particularly for technology firms</li>
+                <li>Learning experience design for educational platforms</li>
+                <li>Digital literacy education in community settings</li>
+            </ul>
+
+            <p>Any of these paths would let me put my degree to work in meaningful ways that fuel both personal growth and career satisfaction. Feel free to explore my detailed experience and qualifications in the resumes below.</p>
+
+            <p><a href="content/roesch_resume.pdf" target="_blank" class="resume-link">📄 View PDF Resume</a></p>
+            
+            <div class="video-container">
+                <video controls poster="content/video_poster.jpg" title="Becky Roesch Video Resume">
+                <source src="content/video_resume.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>    
+        </div>
+        </main>
 
     <footer>
-        <!-- slight variance among footer content for different display sizes -->
-        
-        © 2025 Becky Roesch | <a href="mailto:rmr677@umsystem.edu">Let's connect!</a><br>
-        Built with HTML, CSS, and passion for learning technologies.
-
+        Connect with Becky: 
+        <img src="content/email_icon.png" alt="Email" class="footer-icon footer-icon email"><a href="mailto:rmr677@umsystem.edu?subject=Let%27s%20connect%21">rmr677@umsystem.edu</a> | 
+        <img src="content/phone_icon.png" alt="Phone" class="footer-icon footer-icon phone">1+888-888-8888<br>
+        Built with HTML, CSS, & passion for learning technologies. | © 2025 RM Roesch
     </footer>
 
 </body>
