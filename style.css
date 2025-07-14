@@ -238,6 +238,21 @@ h3  {
     line-height: 1.7;
 }
 
+/* Paragraph links - also duh */
+p a {
+    color: var(--sapphire-blue);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+p a:hover {
+    color: var(--vibrant-orange);
+}
+
+p a:visited {
+    color: var(--sapphire-blue);
+}
+
 
 /* ----- EDUCATION TABLE STYLES ----- */
 .education-table {
@@ -567,6 +582,42 @@ nav ul li::before {
         max-width: 100%;
     }
 }
+
+/* ----- BLOG EMBED STYLES ----- */
+
+.blog-embed {
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+    margin: 15px 0;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1); 
+}
+
+.blog-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ----- VIDEO PLAYER STYLES (Goal 3) ----- */
+
+.video-player {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.artifact-container .video-player video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+    position: static;
+}
+
 
 
 /* ----- MOBILE RESPONSIVE MEDIA QUERIES ----- */
@@ -1299,6 +1350,14 @@ nav ul li::before {
     .artifact-heading {
         font-size: 0.95rem;
     }
+
+    .blog-embed {
+        height: 300px;
+    }
+
+    .artifact-container .video-player video {
+        max-width: 100%;
+    }
 }
 
 /* ----- PROJECTS PAGE TABLET STYLES (768-1023px) ----- */
@@ -1327,6 +1386,12 @@ nav ul li::before {
     h1 {
         font-size: 2.5rem;
     }
+
+     /* Project Video Sizing - for Tablet */
+    .artifact-container .video-player video {
+        max-width: 700px;
+    }
+
 
 /* Tablet: Mixed layout - may go side-by-side if content fits */
     /* Attempted side-by-side layout but content too long for comfortable reading */
@@ -1374,7 +1439,15 @@ nav ul li::before {
     h1 {
         font-size: 2.8rem;
     }
+
+    /* Project Video Sizing - for Desktop */
+    .artifact-container .video-player video {
+        max-width: 800px;
     }
+
+    }
+
+
 
 /* Desktop: Definite side-by-side layout */
 /* Attempted side-by-side layout but content too long to fit well. Then I started playing with a three-part grid the way I did on my
