@@ -696,15 +696,22 @@ nav ul li::before {
 
     /* Ed Table for Mobile */
     .education-table {
-        font-size: 0.85rem;
-        margin: 1.5rem auto;
+        font-size: 0.7rem;
+        margin: 1rem auto;
         width: 95%;
+        display: block;
     }
 
     .education-table th,
     .education-table td {
         padding: 0.5rem;
         font-size: 0.8rem !important;
+    }
+
+    figure {
+        margin: 1rem auto;
+        text-align: center;
+        width: 100%;
     }
 
 }
