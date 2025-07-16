@@ -262,6 +262,7 @@ p a:hover {
     border-collapse: collapse;
     margin: 1.5rem 0;
     font-family: 'Inter', sans-serif;
+    max-width: 100%;
 }
 
 .education-table th {
