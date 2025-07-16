@@ -58,55 +58,99 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle" id="hamburger">&#9776;</label> <!--- updated from math symbol -->
         
-            <ul class="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="current">About</a></li>
-                <li class="dropdown">
-                <a href="projects.html">Projects</a>
-                <ul class="mobileHide">
-                    <li><a href="projects.html#goal1">Goal 1</a></li>
-                    <li><a href="projects.html#goal2">Goal 2</a></li>
-                    <li><a href="projects.html#goal3">Goal 3</a></li>
+                    <ul class="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html" class="current">About</a></li>
+                        <li class="dropdown">
+                        <a href="projects.html">Projects</a>
+                    <ul class="mobileHide">
+                        <li><a href="projects.html#goal1">Goal 1</a></li>
+                        <li><a href="projects.html#goal2">Goal 2</a></li>
+                        <li><a href="projects.html#goal3">Goal 3</a></li>
+                    </ul>
+                </li>
+                    <li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="#contact.html">Contact</a></li>
                 </ul>
-            </li>
-                <li><a href="reflection.html">Reflection</a></li>
-                <li><a href="#contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <main>
-        <header>
-            <h1>An Introduction</h1>
-        </header>
+        <main class="about-main">
+            <header>
+                <h1>An Introduction</h1>
+            </header>
 
-        <!-- professional headshot here -->
-            <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch's professional headshot" class="headshot-about">
+            <div class="about-content">
 
-            <p>I'm Becky Roesch, a teacher at heart and marketer by trade. My career spans classroom teaching, Apple retail training and customer education. In my current role, I'm a marketer. I help shape our customers' views with my background in education and training. I <b>create clear solutions</b> for complex problems and <b>provide proactive support</b> with creativity. My actions build relationships, and those relationships drive results.</p>
+            <!-- professional headshot here TODO add hover tooltip code -->
+                <img src="content/01_roesch_headshot_web-ready_300.jpg" alt="Becky Roesch's professional headshot" class="headshot-about">
+
+                <p>I'm Becky Roesch, a teacher at heart and marketer by trade. My career spans classroom teaching, Apple retail training and customer education. In my current role, I'm a marketer. I help shape our customers' views with my background in education and training. I <b>create clear solutions</b> for complex problems and <b>provide proactive support</b> with creativity. My actions build relationships, and those relationships drive results.</p>
+            <!-- COMMENTED OUT: Original education paragraph for future reference
             <p>I'm finishing my Masters in Information Science and Learning Technology at the University of Missouri Columbia this fall. I completed a Chancellor's Certificate in Electronic Arts & Publishing at the University of Missouri St. Louis. I earned my BS.Ed in Elementary Education (with an English minor) from Northwest Missouri State University.</p>
-            <p>My favorite quote comes from cultural anthropologist Margaret Mead:</p>
+            --> 
+            <!-- Education Table -->
+                <figure>
+                    <figcaption>Education Background</figcaption>
+                    <table class="education-table">
+                        <thead>
+                            <tr>
+                                <th>Degree</th>
+                                <th>Institution</th>
+                                <th>Specialization</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>M.S. Information Science & Learning Techologies</td>
+                                <td>University of Missouri, Columbia</td>
+                                <td>Learning Technologies & Design</td>
+                                <td>Fall 2025</td>
+                            </tr>
+                            <tr>
+                                <td>Chancellor's Certificate</td>
+                                <td>University of Missouri, Saint Louis</td>
+                                <td>Electronic Arts & Publishing</td>
+                                <td>Complete</td>
+                            </tr>
+                            <tr>
+                                <td>B.S. Ed Elementary Education</td>
+                                <td>Northwest Missouri State University</td>
+                                <td>English Minor</td>
+                                <td>Complete</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </figure> 
+        
+                <p>My favorite quote comes from cultural anthropologist Margaret Mead:</p>
     
-            <blockquote>"Children must be taught <em>how</em> to think, not <em>what</em> to think."</blockquote>
+                <blockquote>"Children must be taught <em>how</em> to think, not <em>what</em> to think."</blockquote>
     
-            <p>I focus on meeting learners where they are and inspiring them to go farther. This sentiment, coupled with Mead's directive, guides my approach to learning and customer support. After graduating I'm considering a handful of directions I could take professionally, potentially including:</p>
-            <ul>
+                <p>I focus on meeting learners where they are and inspiring them to go farther. This sentiment, coupled with Mead's directive, guides my approach to learning and customer support. After graduating I'm considering a handful of directions I could take professionally, potentially including:</p>
+                <ul>
                 <li>Client onboarding and training, particularly for technology firms</li>
                 <li>Learning experience design for educational platforms</li>
                 <li>Digital literacy education in community settings</li>
-            </ul>
+                </ul>
 
-            <p>Any of these paths would let me put my degree to work in meaningful ways that fuel both personal growth and career satisfaction. Feel free to explore my detailed experience and qualifications in the resumes below.</p>
+                <p>Any of these paths would let me put my degree to work in meaningful ways that fuel both personal growth and career satisfaction. Feel free to explore my detailed experience and qualifications in the resumes below.</p>
 
-            <p><a href="content/roesch_resume.pdf" target="_blank" class="resume-link">📄 View PDF Resume</a></p>
+                <p><a href="content/roesch_resume.pdf" target="_blank" class="resume-link">📄 View PDF Resume</a></p>
             
-            <div class="video-container">
-                <video controls poster="content/video_poster.jpg" title="Becky Roesch Video Resume">
-                <source src="content/video_resume.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>    
+                <div class="video-container">
+                    <video controls poster="content/video_poster.jpg" title="Becky Roesch Video Resume">
+                    <source src="content/video_resume.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>    
+            </div>
         </div>
-        </main>
+    </main>
 
     <footer>
         Connect with Becky: 

@@ -4,11 +4,12 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 13, 2025
-Tested: July 13, 2025 - Passed validation
-    Passed on Mac desktop browsers in Safari, Firefox, and Chrome.
-    Passed on iPad tablet browsers in xx, xx, and xx
-    Passed on iPhone mobile browsers in xx, xx, and xx */
+Last Updated: July 15, 2025
+Tested: July 15, 2025 - Passed validation
+    Passed on Mac laptop browsers in Safari, Firefox, and Chrome.
+    Passed on Windows laptop browser in Chrome.
+    Passed on iPad tablet browsers in Safari, Firefox, and Chrome
+    Passed on iPhone mobile browsers in Safari, Firefox, Chrome. xx */
 
 
 /* ----- CSS RESET ----- */
@@ -249,10 +250,11 @@ p a:hover {
     color: var(--vibrant-orange);
 }
 
-p a:visited {
+/* Projects page specific - keep links blue after visiting */
+.projects-container p a:visited,
+.goal-description a:visited {
     color: var(--sapphire-blue);
 }
-
 
 /* ----- EDUCATION TABLE STYLES ----- */
 .education-table {
@@ -281,10 +283,43 @@ p a:visited {
     line-height: 1.4;
 }
 
-.education-table tr:hover {
-    background-color: var(--off-white);
+
+.education-table tr:nth-child(even) {
+    background-color: #f7fafc;
 }
 
+.education-table tr:nth-child(odd) {
+    background-color: var(--pure-white);
+}
+
+.education-table tr:hover {
+    background-color: #edf2f7;
+}
+
+/* Header and Footer Row styling */
+.education-table thead tr,
+.education-table tfoot tr {
+    background-color: var(--sapphire-blue) !important;
+}
+
+
+.education-table tfoot td {
+    background-color: var(--sapphire-blue);
+    /*color: var(--pure-white);
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    font-size: 0.75rem; */
+    padding: 0.5rem 0.75rem;
+}
+
+figcaption {
+    color: var(--dark-slate);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
 
 /* ----- IMAGE STYLES ----- */
 
@@ -297,12 +332,14 @@ p a:visited {
     text-align: center;
 }
 
+
 /* Home page headshot - size based on layout */
 .headshot-hero {
     display: block;
     border-radius: 3px;
     object-fit: cover;
 }
+
 
 
 
@@ -622,8 +659,9 @@ nav ul li::before {
 
 /* ----- MOBILE RESPONSIVE MEDIA QUERIES ----- */
 
-@media screen and (max-width: 767px){
 
+@media screen and (max-width: 767px){
+    
     /* Hero Grid for Mobile */
 
     .hero-image {
@@ -654,9 +692,7 @@ nav ul li::before {
     margin: 1.5rem auto 0 auto;
     display: block !important;
     }
-}
 
-  
     /* Ed Table for Mobile */
     .education-table {
         font-size: 0.85rem;
@@ -665,8 +701,10 @@ nav ul li::before {
     .education-table th,
     .education-table td {
         padding: 0.5rem;
-        font-size: 0.8rem;
+        font-size: 0.8rem !important;
     }
+
+}
 
     /* About Content - for Mobile */
     .about-content {
@@ -788,7 +826,6 @@ nav ul li::before {
         padding: 1rem 1.5rem; 
         font-size: 1rem;
     }
-
 
 /* ----- TABLET STYLES  - Better spacing for med screens ----- */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
