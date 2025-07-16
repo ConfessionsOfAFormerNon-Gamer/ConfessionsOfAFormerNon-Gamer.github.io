@@ -704,8 +704,9 @@ nav ul li::before {
 
     .education-table th,
     .education-table td {
-        padding: 0.5rem;
-        font-size: 0.8rem !important;
+        padding: 0.3rem;
+        font-size: 0.65rem !important;
+        line-height: 1.2;
     }
 
     figure {
