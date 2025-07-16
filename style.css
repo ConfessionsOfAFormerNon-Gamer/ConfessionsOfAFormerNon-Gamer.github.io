@@ -697,6 +697,8 @@ nav ul li::before {
     /* Ed Table for Mobile */
     .education-table {
         font-size: 0.85rem;
+        margin: 1.5rem auto;
+        width: 95%;
     }
 
     .education-table th,
