@@ -700,6 +700,8 @@ nav ul li::before {
         margin: 1rem auto;
         width: 85%;
         display: block;
+        margin-right: auto;
+
     }
 
     .education-table th,
@@ -713,6 +715,8 @@ nav ul li::before {
         margin: 1rem auto;
         text-align: center;
         width: 100%;
+        padding: 0 1rem;
+
     }
 
 }
