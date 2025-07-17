@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 15, 2025
-Tested: July 15, 2025 - Passed validation
+Last Updated: July 17, 2025
+Tested: July 17, 2025 - Passed validation
     Passed on Mac laptop browsers in Safari, Firefox, and Chrome.
     Passed on Windows laptop browser in Chrome.
     Passed on iPad tablet browsers in Safari, Firefox, and Chrome
@@ -1657,9 +1657,9 @@ index.html and it just didn't feel good. Sticking with a single layout for this 
     cursor: pointer;
     transition: all 0.3s ease;
     min-height: 44px;
-    width: auto;
+    width: 100%;
     display: inline-block;
-    margin: 0.5rem auto 0 auto;
+    margin: 1rem 0 0 0;
 }
 
 .contact-form .submit-button:hover,
@@ -1710,6 +1710,12 @@ index.html and it just didn't feel good. Sticking with a single layout for this 
             max-width: none !important;
             margin: 0 auto !important;
         }
+
+        .contact-form .submit-button {
+            width: 250px;
+            margin: 1rem auto 0 auto;
+            display: block;
+        }
 }
 
 
@@ -1728,6 +1734,10 @@ index.html and it just didn't feel good. Sticking with a single layout for this 
         font-size: 2.8rem;
     }
 
+    .contact-header p {
+        text-wrap: balance;
+    }
+
    .contact-form-section {
         background-color: var(--pure-white) !important;;
         padding: 3rem !important;
@@ -1735,4 +1745,12 @@ index.html and it just didn't feel good. Sticking with a single layout for this 
         width: 900px !important;           
         margin: 0 auto !important;
     }
+
+    .contact-form .submit-button {
+        width: 250px;
+        margin: 1rem auto 0 auto;
+        display: block;
+    }
+
+  
 }
