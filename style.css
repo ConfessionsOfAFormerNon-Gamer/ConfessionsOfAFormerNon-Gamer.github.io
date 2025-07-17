@@ -1500,7 +1500,6 @@ nav ul li::before {
     }
 
 
-
 /* Desktop: Definite side-by-side layout */
 /* Attempted side-by-side layout but content too long to fit well. Then I started playing with a three-part grid the way I did on my
 index.html and it just didn't feel good. Sticking with a single layout for this page. */
@@ -1545,4 +1544,195 @@ index.html and it just didn't feel good. Sticking with a single layout for this 
         gap: 4rem;
     }
 
+}
+
+/* ----- CONTACT PAGE STYLES (NEW 25 0716) ----- */
+
+/* ----- Contact Layout ----- */
+
+.contact-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.contact-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 2rem auto;
+}
+
+.contact-header h1 {
+    color: var(--page-titles);
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+
+
+/* ----- Contact Styles: lookin good! ----- */
+
+.contact-form-section {
+    background-color: var(--pure-white);
+    border-radius: 6px;
+    padding: 2.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--dark-slate);
+    font-weight: 500;
+    font-size: 0.85rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.required {
+    color: var(--vibrant-orange);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: var(--charcoal-black);
+    background-color: var(--pure-white);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--cool-gray);
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--vibrant-orange);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+/* Submit button - matches other buttons on the site */
+
+.contact-form .submit-button {
+    background-color: var(--sapphire-blue);
+    color: var(--pure-white);
+    border: 2px solid var(--sapphire-blue);
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 44px;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem auto 0 auto;
+}
+
+.contact-form .submit-button:hover,
+.contact-form .submit-button:focus {
+    background-color: var(--pure-white);
+    color: var(--sapphire-blue);
+    border-color: var(--sapphire-blue);
+    outline: none;
+}
+
+/* ----- CONTACT PAGE MOBILE STYLES (320-767px) ----- */
+
+@media screen and (max-width: 767px) {
+    .contact-main {
+        padding: 0 0.5rem;
+        max-width: 100%;
+    }
+
+    .contact-header h1 {
+        font-size: 2rem;
+    }
+
+    .contact-form-section {
+        padding: 1.5rem;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ----- CONTACT PAGE TABLET STYLES (768-1023px) ----- */
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+        .contact-main {
+            max-width: 850px;
+        }
+
+        .contact-form-section {
+            padding: 2.5rem !important;
+            width: 750px !important;
+            max-width: none !important;
+            margin: 0 auto !important;
+        }
+}
+
+
+/* ----- CONTACT PAGE DESKTOP STYLES (1024px+) ----- */
+@media screen and (min-width: 1024px) {
+    
+    .contact-main {
+        max-width: 1100px !important;
+    }
+
+    .contact-header {
+        max-width: 1000px !important;
+    }
+    
+    .contact-header h1 {
+        font-size: 2.8rem;
+    }
+
+   .contact-form-section {
+        background-color: var(--pure-white) !important;;
+        padding: 3rem !important;
+        max-width: none !important;    
+        width: 900px !important;           
+        margin: 0 auto !important;
+    }
 }

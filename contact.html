@@ -1,0 +1,121 @@
+<!--
+********************************************************************************************************
+Title: Contact Page
+Use: Contact form for portfolio inquiries and collaboration opportunities
+Author: Becky Roesch
+School/Term: University of Missouri, Summer 2025
+Course: IS_LT 7355 Web Design & Development
+Updated: July 16, 2025
+Developed: July 16, 2025
+Tested: July 16, 2025 - in progress
+Passed VI on Mac desktop browsers in xx, xx, and xx.
+Passed VI on iPad tablet browsers in xx, xx, and xx.
+Passed VI on iPhone mobile browsers in xx, xx, and xx.
+    Each browser's footer font size for email address was disproportionately smaller in landscape view.
+********************************************************************************************************
+-->
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projects - Becky Roesch</title>
+        
+        <!-- GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap" rel="stylesheet" type="text/css">
+
+        <!-- FAVICONS -->
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+
+        <!-- LINK TO CSS FILES -->
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="nav.css" type="text/css">
+    </head>
+
+    <body>
+         <!-- Navigation -->
+        <nav>
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="nav-logo">
+                    <img src="content/BR_dk_slate_logo.png" alt="" class="logo-icon">
+                    <span class="logo-text">Becky Roesch</span>
+                </a>
+
+                <!-- Single Navigation - Checkbox Trick -->
+
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" id="hamburger">&#9776;</label>
+            
+                <ul class="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="projects.html">Projects</a>
+                        <ul class="mobileHide">
+                            <li><a href="#goal1">Goal 1</a></li>
+                            <li><a href="#goal2">Goal 2</a></li>
+                            <li><a href="#goal3">Goal 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="reflection.html">Reflection</a></li>
+                    <li><a href="contact.html" class="current">Contact</a>
+                 </ul>
+             </div>
+        </nav>
+
+          <!-- Main Content -->
+
+        <main>
+            <div class="contact-main">
+                <!-- Page Header -->
+                <header class="contact-header">
+                    <h1>Let's Connect</h1>
+                    <p class="page-subtitle">I'd love to hear from you about opportunities, collaborations or portfolio feedback!</p>
+                </header>
+
+                <!-- Contact Form Itself -->
+                <div class="contact-form-section">
+                    <form action="mailto:rmr677@umsystem.edu?Subject=Subject=Portfolio%20Form%20ReachOut" method="post" enctype="text/plain" class="contact-form">
+                        
+                        <div class="form-group">
+                            <label for="first-name">First Name <span class="required">*</span></label>
+                            <input type="text" id="first-name" name="first-name" placeholder="your first name" required autofocus> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last-name">Last Name <span class="required">*</span></label>
+                            <input type="text" id="last-name" name="last-name" placeholder="your last name" required>
+                        </div>
+
+                         <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="text" id="email" name="email" placeholder="your.email@example.com" required>
+                        </div>
+
+                            <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, opportunity, or just say hello!" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+        Connect with Becky: 
+            <img src="content/email_icon.png" alt="Email" class="footer-icon footer-icon email"><a href="mailto:rmr677@umsystem.edu?subject=Let%27s%20connect%21">rmr677@umsystem.edu</a> | 
+            <img src="content/phone_icon.png" alt="Phone" class="footer-icon footer-icon phone">1+888-888-8888<br>
+            Built with HTML, CSS, & passion for learning technologies. | © 2025 RM Roesch
+        </footer>
+
+    </body>
+    </html>
