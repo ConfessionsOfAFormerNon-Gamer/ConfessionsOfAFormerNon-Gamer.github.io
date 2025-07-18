@@ -19,7 +19,7 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Projects - Becky Roesch</title>
+        <title>Contact Form - Becky Roesch</title>
         
         <!-- GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -82,7 +82,7 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
 
                 <!-- Contact Form Itself -->
                 <div class="contact-form-section">
-                    <form action="mailto:rmr677%40umsystem.edu?Subject=Portfolio%20Form%20ReachOut" method="post" enctype="text/plain" class="contact-form">
+                    <form action="mailto:rmr677@umsystem.edu?Subject=Portfolio-Form-ReachOut" method="post" enctype="text/plain" class="contact-form">
                         
                         <div class="form-group">
                             <label for="first-name">First Name <span class="required">*</span></label>
@@ -97,7 +97,8 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
                          <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
                             <!-- email addresses were being accepted as valid as long as they included the @ symbol, 
-                                even if nothing else came after it. I made the code tighter to compensate.-->
+                                even if nothing else came after it. I made the code tighter to compensate. It worked 
+                                in Safari but apparently Chrome and Firefox have different validation strictness levels. I am BEYOND frustrated at this!!-->
                             <input type="email" 
                                     id="email" 
                                     name="email" 
