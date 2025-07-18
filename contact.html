@@ -8,12 +8,12 @@ Course: IS_LT 7355 Web Design & Development
 Updated: July 17, 2025
 Developed: July 16, 2025
 Tested: July 17, 2025:
-Passed VI on Mac desktop browsers in Safari, Firefox, and Chrome.
-Passed VI on iPad tablet browsers in Safari, Firefox, and Chrome.
-Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
-    Each browser's footer font size for email address was disproportionately smaller in landscape view.
+Contact form tested across multiple browsers. Functions correctly in Chrome, Firefox, and mobile Safari. 
+Desktop Safari blocks mailto forms due to security settings - this is a known Safari limitation.
+Passed VI on Mac desktop browser, iPad tablet browser, and iPhone mobile browser in Safari, Firefox, and Chrome.
 ********************************************************************************************************
 -->
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -82,7 +82,7 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
 
                 <!-- Contact Form Itself -->
                 <div class="contact-form-section">
-                    <form action="mailto:rmr677@umsystem.edu" method="post" enctype="text/plain" class="contact-form">
+                    <form action="mailto:rmr677@umsystem.edu?Subject=Portfolio%20Form%20ReachOut" method="post" enctype="text/plain" class="contact-form">
                         
                         <div class="form-group">
                             <label for="first-name">First Name <span class="required">*</span></label>
