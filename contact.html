@@ -82,7 +82,7 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
 
                 <!-- Contact Form Itself -->
                 <div class="contact-form-section">
-                    <form action="mailto:rmr677@umsystem.edu?Subject=Subject=Portfolio%20Form%20ReachOut" method="post" enctype="text/plain" class="contact-form">
+                    <form action="mailto:rmr677%40umsystem.edu?Subject=Portfolio%20Form%20ReachOut" method="post" enctype="text/plain" class="contact-form">
                         
                         <div class="form-group">
                             <label for="first-name">First Name <span class="required">*</span></label>
@@ -96,7 +96,15 @@ Passed VI on iPhone mobile browsers in Safari, Firefox, and Chrome.
 
                          <div class="form-group">
                             <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            <!-- email addresses were being accepted as valid as long as they included the @ symbol, 
+                                even if nothing else came after it. I made the code tighter to compensate.-->
+                            <input type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="your.email@example.com" 
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" 
+                                    title="Please try your email again; it needs an ending like .com or .edu" 
+                                    required>
                         </div>
 
                             <div class="form-group">
