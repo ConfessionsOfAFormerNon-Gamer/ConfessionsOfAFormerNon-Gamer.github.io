@@ -1093,7 +1093,7 @@ nav ul li::before {
     }
 
     /* No-Show Non-Printing Info */
-    nav, .headshot-about, .resume-link, .video-container {
+    nav, .headshot-about, .resume-link, .education-table, .video-container {
         display: none;
     }
 
