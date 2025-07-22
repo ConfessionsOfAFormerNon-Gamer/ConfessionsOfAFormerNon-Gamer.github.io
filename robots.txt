@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: https://confessionsofaformernon-gamer.github.io/sitemap.xml
