@@ -942,7 +942,7 @@ nav ul li::before {
         grid-template-areas:
             "content photo"
             "overflow overflow";
-        gap: 3rem;
+        gap: 1.5rem;
         align-items: start;
     }
 
