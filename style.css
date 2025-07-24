@@ -4,8 +4,8 @@ Author: Becky Roesch
 Course: IS_LT 7355 Web Design & Development
 University of Missouri, Summer 2025
 Created: June 18, 2025
-Last Updated: July 17, 2025
-Tested: July 17, 2025 - Passed validation
+Last Updated: July 23, 2025
+Tested: July 23, 2025 - Passed validation
     Passed on Mac laptop browsers in Safari, Firefox, and Chrome.
     Passed on Windows laptop browser in Chrome.
     Passed on iPad tablet browsers in Safari, Firefox, and Chrome
@@ -398,7 +398,8 @@ blockquote::after {
 /* ----- FOOTER ELEMENTS ----- */
 
 footer {
-    background: url('content/footer_bg_final.png') repeat; /* footer bkgd image - assignment requirement */
+    /* background: url('content/footer_bg_final.png') repeat; /* footer bkgd image - assignment requirement */
+    background-color: var(--dark-slate);
     background-size: 5px 5px;
     color: var(--footer-text);
     font-family: 'Inter', sans-serif;
@@ -439,20 +440,29 @@ footer {
 
 .footer-icon.phone {
     height: 22px;
-    margin-left: 2px;
+    margin-left: 4px;
     margin-right: 6px;
+    vertical-align: middle;
+}
+
+.footer-icon.briefcase {
+    height: 18px;
+    margin-left: 4px;
+    margin-right: 2px;
     vertical-align: middle;
 }
 
 /* Footer Icon Animation */
 .footer-icon.email,
-.footer-icon.phone {
+.footer-icon.phone,
+.footer-icon.briefcase {
     transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .footer-icon.email:hover,
-.footer-icon.phone:hover {
+.footer-icon.phone:hover,
+.footer-icon.briefcase:hover {
     transform: scale(1.5);
 }
 
@@ -1019,10 +1029,10 @@ nav ul li::before {
 /* Box Model - Container for ALL reflection.html content */
     .reflection-content {
         background-color: var(--pure-white);
-        padding: 2rem;
+        padding: 0;
         margin: 2rem 0;
         border-radius: 6px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        /* box-shadow: 0 2px 8px rgba(0,0,0,0.1); REMOVED */
 
     }
 
@@ -1039,15 +1049,15 @@ nav ul li::before {
     }
 
 
-/* Text Indent - ALLLLLL paragraphs except first */
+/* Text Indent - ALLLLLL paragraphs except first
     .reflection-content p:not(.first-paragraph){
         text-indent: 1.5rem;
-    }
+    } */
 
 
 /* Readable spacing for all paragraphs, per specs */
     .reflection-content p {
-        margin-bottom: 1.5rem;
+        margin-bottom: 0.75rem;
         line-height: 1.7rem;
     }
 
@@ -1055,14 +1065,14 @@ nav ul li::before {
 /* H2 headings inside reflection content */
     .reflection-content h2 {
         margin-top: 2.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.25rem;
         color: var(--dark-slate);
     }
 
 
 /* First H2 doesn't need a top margin, coming off the H1 spacing */
     .reflection-content h2:first-of-type {
-        margin-top: 0;
+        margin-top: 1rem;
     }
 
 
